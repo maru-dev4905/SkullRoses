@@ -1,0 +1,127 @@
+
+@mixin image (
+    $url,
+    $size:null,
+    $pos:null,
+    $rep:null
+){
+    background-image: url($url);
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: $rep;
+}
+@mixin flex(
+    $dir:null,
+    $jusCon:null,
+    $aliCon:null,
+    $jusItem:null,
+    $aliItem:null,
+    $jusSelf:null,
+    $aliSelf:null,
+){
+    display: flex;
+    flex-direction:$dir;
+    justify-content: $jusCon;
+    justify-items: $jusItem;
+    justify-self: $jusSelf;
+    align-content: $aliCon;
+    align-items: $aliItem;
+    align-self: $aliSelf;
+}
+
+@mixin grid(
+    $flow:null,
+    $tCol:null,
+    $tRow:null,
+    $tAre:null,
+    $col:null,
+    $row:null,
+    $gap:null,
+    $rGap:null,
+    $cGap:null,
+    $AtCol:null,
+    $AtRow:null,
+    $jusCon:null,
+    $aliCon:null,
+    $jusItem:null,
+    $aliItem:null,
+    $jusSelf:null,
+    $aliSelf:null,
+){
+    display: grid;
+    grid-auto-flow: $flow;
+    grid-template-columns: $tCol;
+    grid-template-rows: $tRow;
+    grid-template-areas: $tAre;
+    grid-column: $col;
+    grid-row:$row;
+    grid-gap: $gap;
+    row-gap: $rGap;
+    column-gap: $cGap;
+    grid-auto-columns: $AtCol;
+    grid-auto-rows: $AtRow;
+    justify-content: $jusCon;
+    justify-items: $jusItem;
+    justify-self: $jusSelf;
+    align-content: $aliCon;
+    align-items: $aliItem;
+    align-self: $aliSelf;
+}
+
+@mixin font(
+    $size:null,
+    $color:null,
+    $weight:null,
+    $transform:null,
+    $letter:null,
+    $break:null,
+    $height:null,
+    $align:null
+){
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    text-transform: $transform;
+    letter-spacing: $letter;
+    word-break: $break;
+    line-height: $height;
+    text-align: $align;
+}
+@mixin position(
+    $pos:null,
+    $t:null,
+    $l:null,
+    $b:null,
+    $r:null,
+    $z:null
+){
+    position: $pos;
+    top: $t;
+    left: $l;
+    right: $r;
+    bottom: $b;
+    z-index: $z;
+}
+@mixin responsive($device){
+    @if $device == "iphone-s"{
+        @media screen and (min-width: $smallIphone) and (max-width: $minIphone){
+            @content;
+        }
+    }@else if $device == "iphone"{
+        @media screen and (min-width: $minIphone) and (max-width: $maxIphone){
+            @content;
+        }   
+    }@else if $device == "tablet"{
+        @media screen and (min-width: $minTablet) and (max-width: $maxTablet){
+            @content;
+        }
+    }@else if $device == "iphone-l"{
+        @media screen and (min-width: $minIphone) and (max-width: $maxIphonex) and (orientation: landscape) {
+            @content;
+        }
+    }@else if $device == "ipad-l"{
+        @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
