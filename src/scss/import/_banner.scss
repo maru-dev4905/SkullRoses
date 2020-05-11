@@ -16,12 +16,18 @@
         -webkit-transition-duration: 0.4s;
         transition-property: filter,-webkit-filter;
         -webkit-transition-property: -webkit-filter;
-        object-fit: cover;
         filter: blur(2vw) brightness(110%) contrast(1.2);
         -webkit-filter: blur(2vw) brightness(110%) contrast(1.2);
     }
     .banner__bg--loaded{
         filter: none;
         -webkit-filter: none;
+    }
+    .banner__img{
+        @include image($url:"../images/main/skulls-roses.svg",$pos:center bottom,$size:100%,$rep:no-repeat);
+        @include position($pos:absolute,$b:-100px,$l:calc(50% - 1110px));
+        width: 2220px;
+        height: 430px;
+        overflow: hidden;
     }
 }
