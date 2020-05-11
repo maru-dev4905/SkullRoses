@@ -1,2 +1,27 @@
 @import "../common/mixin";
 @import "../common/variable";
+
+.banner{
+    @include position($pos:absolute,$t:0,$l:0);
+    background-color: $bgC;
+    width: 100vw;
+    height: 100%;
+    .banner__bg{
+        @include image($url:"../images/main/background.jpg",$pos:center center,$size:cover);
+        width: 100%;
+        height: 100%;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        transition-property: filter,-webkit-filter;
+        -webkit-transition-property: -webkit-filter;
+        object-fit: cover;
+        filter: blur(2vw) brightness(110%) contrast(1.2);
+        -webkit-filter: blur(2vw) brightness(110%) contrast(1.2);
+    }
+    .banner__bg--loaded{
+        filter: none;
+        -webkit-filter: none;
+    }
+}
