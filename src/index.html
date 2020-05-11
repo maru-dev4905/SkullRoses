@@ -43,6 +43,7 @@
         <title>Skull and Roses - April 8-11, Celebrating The Music and Community of the
             Grateful Dead</title>
         <link rel="stylesheet" href="./css/skull.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
     </head>
     <body>
         <header class="header">
@@ -75,24 +76,32 @@
         <main>
             <section class="banner">
                 <figure class="banner__bg"></figure>
-                <figure class="banner__img"></figure>
+                <figure class="banner__img" data-aos="fade-in" data-aos-delay="1500"></figure>
                 <div class="banner__container">
                     <div class="banner__content">
-                        <h1>
-                            celebrating The Music and 
-                            community of the 
+                        <h1 class="banner__content__title" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                            celebrating The Music and <br>
+                            community of the <br>
                             grateful Dead
                         </h1>
-                        <p>
-                            APRIL 8-11, 2021
-                        </p>
-                        <p>
-                            vebtyra county, ca
-                        </p>
+                        <div class="banner__content__copy" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                            <p>
+                                APRIL 8-11, 2021
+                            </p>
+                            <p>
+                                ventura county, ca
+                            </p>
+                        </div>
+                        <div class="banner__content__link" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
+                            <a href="#">
+                                get passes
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
         <script src="js/Loaded.js"></script>
+        <script src="js/aos.js"></script>
     </body>
 </html>

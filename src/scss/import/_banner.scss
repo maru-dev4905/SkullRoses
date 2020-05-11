@@ -5,7 +5,8 @@
     @include position($pos:absolute,$t:0,$l:0);
     background-color: $bgC;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
+    margin: 0 auto;
     .banner__bg{
         @include image($url:"../images/main/background.jpg",$pos:center center,$size:cover);
         width: 100%;
@@ -29,5 +30,45 @@
         width: 2220px;
         height: 430px;
         overflow: hidden;
+    }
+}
+.banner__container{
+    @include flex($jusCon:center,$aliItem:center);
+    @include position($pos:absolute,$t:0,$l:50%);
+    max-width: 1000px;
+    width: 90%;
+    height: 100%;
+    transform: translateX(-50%);
+    .banner__content{
+        @include font($align:center,$color:$white,$transform:uppercase);
+        width: 100%;
+        max-width: 640px;
+        .banner__content__title{
+            @include font($size:2.625rem,$height:2.625rem,$letter:1.1px,$weight:400);
+            margin-bottom: 30px;
+        }
+        .banner__content__copy{
+            @include font($size:1.25rem,$weight:300);
+            margin-bottom: 20px;
+        }
+        .banner__content__link{
+            @include flex($dir:row,$jusCon:center,$aliItem:center);
+            @include font($size:1.125rem,$weight:600);
+            transition: 0.3s;
+            a{
+                color: $white;
+            }
+            &::before{
+                @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
+                content: "";
+                display: inline-block;
+                width: 19px;
+                height: 19px;
+                margin-right: 10px;
+            }
+            &:hover{
+                opacity: 0.6;
+            }
+        }
     }
 }
