@@ -6,11 +6,11 @@
     background-color: $bgC;
     height: 100vh;
 
-    // &::before{
-    //     background-image: url(../images/main/swirls-1.svg);
-    //     content: "";
-    //     display: block;
-    //     position: relative;
-    //     z-index: 500;
-    // }
+    &::before{
+        background-image: url(../images/main/swirls-1.svg);
+        content: "";
+        display: block;
+        position: relative;
+        z-index: 500;
+    }
 }
