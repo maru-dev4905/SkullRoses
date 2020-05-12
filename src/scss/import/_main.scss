@@ -1,0 +1,15 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+main{
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    
+    &::before{
+        @include image($url:"../images/common/roses-left.svg",$pos:center center, $size:contain, $rep:no-repeat);
+        content:"";
+        width: 50px;
+        height: 50px;
+    }
+}
