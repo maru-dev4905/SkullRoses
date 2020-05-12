@@ -2,14 +2,22 @@
 @import "../common/variable";
 
 main{
+    @include position($pos:absolute,$t:0,$l:0);
     width: 100vw;
     height: auto;
-    overflow: hidden;
     
     &::before{
-        @include image($url:"../images/common/roses-left.svg",$pos:center center, $size:contain, $rep:no-repeat);
+        @include image($url:"../images/common/roses-left.svg",$size:contain,$rep:no-repeat);
+        @include position($pos:absolute,$l:calc(50% - 648px),$b:-430px,$z:1000);        content: "";
         content:"";
-        width: 50px;
-        height: 50px;
+        width: 420px;
+        height: 485px;
+    }
+    &::after{
+        @include image($url:"../images/common/roses-right.svg",$size:contain,$rep:no-repeat);
+        @include position($pos:absolute,$l:calc(100% - 542.5px),$b:-209px,$z:1000);
+        content: "";
+        width: 370px;
+        height: 265px;
     }
 }

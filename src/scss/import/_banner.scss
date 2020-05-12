@@ -2,7 +2,6 @@
 @import "../common/variable";
 
 .banner {
-    @include position($pos:absolute,$t:0,$l:0);
     background-color: $bgC;
     width: 100vw;
     height: 100vh;
