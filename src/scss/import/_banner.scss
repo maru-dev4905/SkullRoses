@@ -1,13 +1,13 @@
 @import "../common/mixin";
 @import "../common/variable";
 
-.banner{
+.banner {
     @include position($pos:absolute,$t:0,$l:0);
     background-color: $bgC;
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
-    .banner__bg{
+    .banner__bg {
         @include image($url:"../images/main/background.jpg",$pos:center center,$size:cover);
         width: 100%;
         height: 100%;
@@ -20,11 +20,11 @@
         filter: blur(2vw) brightness(110%) contrast(1.2);
         -webkit-filter: blur(2vw) brightness(110%) contrast(1.2);
     }
-    .banner__bg--loaded{
+    .banner__bg--loaded {
         filter: none;
         -webkit-filter: none;
     }
-    .banner__img{
+    .banner__img {
         @include image($url:"../images/main/skulls-roses.svg",$pos:center bottom,$size:100%,$rep:no-repeat);
         @include position($pos:absolute,$b:-100px,$l:calc(50% - 1110px));
         width: 2220px;
@@ -32,33 +32,34 @@
         overflow: hidden;
     }
 }
-.banner__container{
+.banner__container {
     @include flex($jusCon:center,$aliItem:center);
     @include position($pos:absolute,$t:0,$l:50%);
     max-width: 1000px;
     width: 90%;
     height: 100%;
     transform: translateX(-50%);
-    .banner__content{
+    .banner__content {
         @include font($align:center,$color:$white,$transform:uppercase);
         width: 100%;
         max-width: 640px;
-        .banner__content__title{
-            @include font($size:2.625rem,$height:2.625rem,$letter:1.1px,$weight:400);
+        .banner__content__title {
+            @include font($size:2.625rem,$height:2.625rem,$letter:1.3px,$weight:400,$color:rgba($color:$white,$alpha:0));
+            -webkit-text-stroke: 1.5px $white;
             margin-bottom: 30px;
         }
-        .banner__content__copy{
+        .banner__content__copy {
             @include font($size:1.25rem,$weight:300);
             margin-bottom: 20px;
         }
-        .banner__content__link{
+        .banner__content__link {
             @include font($size:1.125rem,$weight:600);
             cursor: pointer;
-            a{
+            a {
                 @include flex($dir:row,$jusCon:center,$aliItem:center);
                 transition: 0.3s;
                 color: $white;
-                &::before{
+                &::before {
                     @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
                     content: "";
                     display: inline-block;
@@ -66,7 +67,7 @@
                     height: 19px;
                     margin-right: 10px;
                 }
-                &:hover{
+                &:hover {
                     opacity: 0.6;
                 }
             }
