@@ -14,13 +14,27 @@
     }
 }
 .header__nav {
-    @include flex($dir:row, $jusCon:space-between,$aliItem:center);
+    @include flex($dir:row,$aliItem:center);
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
-
+    .header__nav--item{
+        background-color: $white;
+        padding: 4.5px 10.5px;
+        transition: 0.3s;
+        a{
+            color: $red;
+        }
+        &:hover{
+            background-color: red;
+            a{
+                color: $white;
+            }
+        }
+    }
     .header__logo{
-        padding: 0 15px;
+        margin: 0 auto;
+        transform: translateX(-15px);
         a {
             @include image($url:"../images/logo/logo@2x.png",$pos:center center,$size:contain,$rep:no-repeat);
             display: block;
@@ -30,11 +44,11 @@
     } 
     li{
         height: 100%;
-        padding: 2px 11px;
+        margin-right: 30px;
         a{
             @include font($size:0.9375rem,$transform:uppercase,$color:$white,$weight:600);
             display: block;
-            padding: 13px;
+            padding: 11px;
             transition: 0.4s;
             &:hover{
                 color: #d52316;
