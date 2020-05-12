@@ -1,0 +1,16 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+.artist{
+    width: 100vw;
+    background-color: $bgC;
+    height: 100vh;
+
+    // &::before{
+    //     background-image: url(../images/main/swirls-1.svg);
+    //     content: "";
+    //     display: block;
+    //     position: relative;
+    //     z-index: 500;
+    // }
+}
