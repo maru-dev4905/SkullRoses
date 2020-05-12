@@ -15,7 +15,7 @@ main{
     }
     &::after{
         @include image($url:"../images/common/roses-right.svg",$size:contain,$rep:no-repeat);
-        @include position($pos:absolute,$l:calc(100% - 542.5px),$b:-209px,$z:1000);
+        @include position($pos:absolute,$r:calc(50% - 598.5px),$b:-208px,$z:1000);
         content: "";
         width: 370px;
         height: 265px;
