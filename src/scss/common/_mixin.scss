@@ -1,4 +1,6 @@
+@import "../common/variable";
 
+// background-image mixin
 @mixin image (
     $url,
     $size:null,
@@ -10,6 +12,7 @@
     background-position: $pos;
     background-repeat: $rep;
 }
+// display flex mixin
 @mixin flex(
     $dir:null,
     $jusCon:null,
@@ -28,7 +31,7 @@
     align-items: $aliItem;
     align-self: $aliSelf;
 }
-
+// display grid mixin
 @mixin grid(
     $flow:null,
     $tCol:null,
@@ -67,7 +70,7 @@
     align-items: $aliItem;
     align-self: $aliSelf;
 }
-
+// font mixin
 @mixin font(
     $size:null,
     $color:null,
@@ -87,6 +90,7 @@
     line-height: $height;
     text-align: $align;
 }
+// position mixin
 @mixin position(
     $pos:null,
     $t:null,
@@ -102,6 +106,7 @@
     bottom: $b;
     z-index: $z;
 }
+// responsive mixin
 @mixin responsive($device){
     @if $device == "iphone-s"{
         @media screen and (min-width: $smallIphone) and (max-width: $minIphone){
@@ -122,6 +127,33 @@
     }@else if $device == "ipad-l"{
         @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
             @content;
+        }
+    }
+}
+// title mixin
+@mixin title($color,$width,$height) {
+    [class$=__title]{
+        @include flex($dir:column,$jusCon:center,$aliItem:center);
+        @include font($color:$opC, $transform:uppercase,$letter:1.5px);
+        margin: 0 auto 60px auto;
+        padding-bottom: 20px;
+        -webkit-text-stroke: 1.5px $white;
+        h2{
+            @include font($size:2.8125rem);
+            &::after{
+                @if($color == wine){
+                    @include image($url:"../images/common/underline-wine.svg",$pos:center center,$size:contain,$rep:no-repeat);
+                }@else{
+                    @include image($url:"../images/common/underline-red.svg",$pos:center center,$size:contain,$rep:no-repeat);
+                }
+                content: "";
+                display: inline-block;
+                width: $width;
+                height: $height;
+            }
+        }
+        h3{
+
         }
     }
 }

@@ -2,15 +2,15 @@
 @import "../common/variable";
 
 .artist{
-    width: 100vw;
+    @include position($pos:absolute,$z:500);
+    @include image($url:"../images/main/swirls-1.svg",$pos:center center,$size:cover,$rep:no-repeat);
     background-color: $bgC;
+    width: 100vw;
     height: 100vh;
+    padding: 80px 0 150px 0;
+    
+    @include title($color:red,$width:230px,$height:8px);
+    .artist__title{
 
-    &::before{
-        background-image: url(../images/main/swirls-1.svg);
-        content: "";
-        display: block;
-        position: relative;
-        z-index: 500;
     }
 }
