@@ -70,6 +70,13 @@
             color: $white;
             opacity: 0;
             transition: 0.3s;
+            &::after{
+                @include image($url:"../images/icon/button.svg",$pos:center center,$size:contain,$rep:no-repeat);
+                content: "";
+                width: 18px;
+                height: 18px;
+                margin-left:5px;
+            }
         }
     }
     &:hover {
