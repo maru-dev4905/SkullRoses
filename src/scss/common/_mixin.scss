@@ -1,29 +1,16 @@
 @import "../common/variable";
 
 // background-image mixin
-@mixin image (
-    $url,
-    $size:null,
-    $pos:null,
-    $rep:null
-){
+@mixin image ($url, $size:null, $pos:null, $rep:null) {
     background-image: url($url);
     background-size: $size;
     background-position: $pos;
     background-repeat: $rep;
 }
 // display flex mixin
-@mixin flex(
-    $dir:null,
-    $jusCon:null,
-    $aliCon:null,
-    $jusItem:null,
-    $aliItem:null,
-    $jusSelf:null,
-    $aliSelf:null,
-){
+@mixin flex($dir:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,) {
     display: flex;
-    flex-direction:$dir;
+    flex-direction: $dir;
     justify-content: $jusCon;
     justify-items: $jusItem;
     justify-self: $jusSelf;
@@ -32,32 +19,14 @@
     align-self: $aliSelf;
 }
 // display grid mixin
-@mixin grid(
-    $flow:null,
-    $tCol:null,
-    $tRow:null,
-    $tAre:null,
-    $col:null,
-    $row:null,
-    $gap:null,
-    $rGap:null,
-    $cGap:null,
-    $AtCol:null,
-    $AtRow:null,
-    $jusCon:null,
-    $aliCon:null,
-    $jusItem:null,
-    $aliItem:null,
-    $jusSelf:null,
-    $aliSelf:null,
-){
+@mixin grid($flow:null, $tCol:null, $tRow:null, $tAre:null, $col:null, $row:null, $gap:null, $rGap:null, $cGap:null, $AtCol:null, $AtRow:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,) {
     display: grid;
     grid-auto-flow: $flow;
     grid-template-columns: $tCol;
     grid-template-rows: $tRow;
     grid-template-areas: $tAre;
     grid-column: $col;
-    grid-row:$row;
+    grid-row: $row;
     grid-gap: $gap;
     row-gap: $rGap;
     column-gap: $cGap;
@@ -71,16 +40,7 @@
     align-self: $aliSelf;
 }
 // font mixin
-@mixin font(
-    $size:null,
-    $color:null,
-    $weight:null,
-    $transform:null,
-    $letter:null,
-    $break:null,
-    $height:null,
-    $align:null
-){
+@mixin font($size:null, $color:null, $weight:null, $transform:null, $letter:null, $break:null, $height:null, $align:null) {
     font-size: $size;
     color: $color;
     font-weight: $weight;
@@ -91,14 +51,7 @@
     text-align: $align;
 }
 // position mixin
-@mixin position(
-    $pos:null,
-    $t:null,
-    $l:null,
-    $b:null,
-    $r:null,
-    $z:null
-){
+@mixin position($pos:null, $t:null, $l:null, $b:null, $r:null, $z:null) {
     position: $pos;
     top: $t;
     left: $l;
@@ -107,24 +60,24 @@
     z-index: $z;
 }
 // responsive mixin
-@mixin responsive($device){
-    @if $device == "iphone-s"{
-        @media screen and (min-width: $smallIphone) and (max-width: $minIphone){
+@mixin responsive($device) {
+    @if $device == "iphone-s" {
+        @media screen and (min-width: $smallIphone) and (max-width: $minIphone) {
             @content;
         }
-    }@else if $device == "iphone"{
-        @media screen and (min-width: $minIphone) and (max-width: $maxIphone){
-            @content;
-        }   
-    }@else if $device == "tablet"{
-        @media screen and (min-width: $minTablet) and (max-width: $maxTablet){
+    } @else if $device == "iphone" {
+        @media screen and (min-width: $minIphone) and (max-width: $maxIphone) {
             @content;
         }
-    }@else if $device == "iphone-l"{
+    } @else if $device == "tablet" {
+        @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+            @content;
+        }
+    } @else if $device == "iphone-l" {
         @media screen and (min-width: $minIphone) and (max-width: $maxIphonex) and (orientation: landscape) {
             @content;
         }
-    }@else if $device == "ipad-l"{
+    } @else if $device == "ipad-l" {
         @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
             @content;
         }
@@ -132,27 +85,32 @@
 }
 // title mixin
 @mixin title($color,$width,$height) {
-    [class$=__title]{
-        @include flex($dir:column,$jusCon:center,$aliItem:center);
+    [class$=__title] {
+        @include flex($jusCon:center,$aliItem:center);
         @include font($color:$opC, $transform:uppercase,$letter:1.5px);
-        margin: 0 auto 60px auto;
-        padding-bottom: 20px;
+        margin: 0 auto 60px;
         -webkit-text-stroke: 1.5px $white;
-        h2{
-            @include font($size:2.8125rem);
+        
+        h2,h3{
+            @include flex($dir:column,$jusCon:center,$aliItem:Center);
             &::after{
-                @if($color == wine){
-                    @include image($url:"../images/common/underline-wine.svg",$pos:center center,$size:contain,$rep:no-repeat);
-                }@else{
-                    @include image($url:"../images/common/underline-red.svg",$pos:center center,$size:contain,$rep:no-repeat);
+                @if($color == wine) {
+                    @include image($url:"../images/common/underline-wine.svg",$pos:center center,$size:100%,$rep:no-repeat);
+                } @else {
+                    @include image($url:"../images/common/underline-red.svg",$pos:center center,$size:100%,$rep:no-repeat);
                 }
                 content: "";
-                display: inline-block;
+                padding-top: 40px;
                 width: $width;
                 height: $height;
             }
         }
-        h3{
+        h2 {
+            font-size: 2.8125rem;
+            width: 90%;
+            max-width: 1000px;
+        }
+        h3 {
 
         }
     }
