@@ -1,6 +1,5 @@
 @import "../common/mixin";
 @import "../common/variable";
-@import "../common/animation";
 
 .banner {
     background-color: $bgC;
@@ -8,7 +7,12 @@
     height: 100vh;
     margin: 0 auto;
     overflow-x: hidden;
-
+    .banner__left__roses{
+        @include position($pos:absolute,$l:calc(50% - 665px),$t:662px,$z:1000);
+    }
+    .banner__right__roses{
+        @include position($pos:absolute,$r:calc(50% - 614.5px),$t:657px,$z:1000);
+    }
     .banner__bg {
         @include image($url:"../images/main/background.jpg",$pos:center center,$size:cover);
         width: 100%;
@@ -21,28 +25,6 @@
         -webkit-transition-property: -webkit-filter;
         filter: blur(2vw) brightness(110%) contrast(1.2);
         -webkit-filter: blur(2vw) brightness(110%) contrast(1.2);
-        &::after,
-        &::before {
-            content: "";
-            animation: fadein 0.5s;
-            animation-delay: 1.5s;
-        }
-
-        &::before {
-            @include image($url:"../images/common/roses-left.svg",$size:contain,$rep:no-repeat);
-            @include position($pos:absolute,$l:calc(50% - 648px),$t:651px,$z:1000);
-            content: "";
-            content: "";
-            width: 420px;
-            height: 485px;
-        }
-        &::after {
-            @include image($url:"../images/common/roses-right.svg",$size:contain,$rep:no-repeat);
-            @include position($pos:absolute,$r:calc(50% - 598.5px),$t:651px,$z:1000);
-            content: "";
-            width: 370px;
-            height: 265px;
-        }
     }
     .banner__bg--loaded {
         filter: none;
