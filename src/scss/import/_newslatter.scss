@@ -2,11 +2,11 @@
 @import "../common/variable";
 
 .newslatter {
+    position: absolute;
     width: 100vw;
     padding: 80px 0;
     min-height: 430px;
     background-color: $bgC;
-    position: relative;
     &::before {
         @include image($url:"../images/common/sign-up-left.svg",$pos:center center,$size:contain,$rep:no-repeat);
         @include position($pos:absolute,$t:-30px,$l:calc(50% - 670px),$z:500);
@@ -16,7 +16,7 @@
     }
     &::after {
         @include image($url:"../images/common/sign-up-right.svg",$pos:center center,$size:contain,$rep:no-repeat);
-        @include position($pos:absolute,$t:-30px,$l:calc(100% - 1160px),$z:500);
+        @include position($pos:absolute,$t:-30px,$r:calc(50% - 670px),$z:500);
         content: "";
         width: 1040px;
         height: 590px;
@@ -26,7 +26,6 @@
         @include position($pos:absolute,$l:50%,$t:-170px,$z:2000);
         width: 90%;
         max-width: 1000px;
-        margin: 0 auto;
         transform: translateX(-50%);
         figure {
             @include image($url:"../images/common/skull.png",$pos:center center,$size:contain,$rep:no-repeat);
