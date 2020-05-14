@@ -17,31 +17,23 @@
     // }
     .newslatter__signup{
         @include flex($dir:column,$jusCon:center,$aliItem:center);
+        @include position($pos:absolute,$l:50%,$t:-170px,$z:2000);
         width: 90%;
         max-width: 1000px;
         margin: 0 auto;
-        position: absolute;
-        left: 50%;
         transform: translateX(-50%);
-        top: -170px;
-        z-index: 2000;
         figure{
             @include image($url:"../images/common/skull.png",$pos:center center,$size:contain,$rep:no-repeat);
             width: 355px;
             height: 355px;
         }
         h3{
-            font-size: 28px;
-            text-transform: uppercase;
-            color: $opC;
+            @include font($size:1.75rem,$color:$opC,$letter:1.5px,$transform:uppercase);
             -webkit-text-stroke: 1px $white;
-            letter-spacing: 1.5px;
         }
         p{
-            font-size: 16px;
-            color: $white;
+            @include font($size:1rem,$color:$white,$weight:500);
             padding: 20px 0;
-            font-weight: 500;
         }
         form{
             @include flex($dir:column,$jusCon:center,$aliItem:center);
@@ -56,17 +48,13 @@
                 padding: 10px 20px;
                 text-align: center;
                 &::placeholder{
-                    font-size: 13px;
-                    font-weight:600;
-                    letter-spacing: 0.8px;
+                    @include font($size:13px,$weight:600,$letter:0.8px);
                 }
             }
             button{
                 @include flex($jusCon:center,$aliItem:center);
-                font-size: 17px;
+                @include font($size:1.063rem,$color:$white,$weight:600);
                 transition: 0.3s;
-                color: $white;
-                font-weight: 600;
                 &::before{
                     @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
                     content: "";
