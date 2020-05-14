@@ -9,9 +9,13 @@
     overflow-x: hidden;
     .banner__left__roses{
         @include position($pos:absolute,$l:calc(50% - 665px),$t:662px,$z:1000);
+        width: 420px;
+        height: 485px;
     }
     .banner__right__roses{
         @include position($pos:absolute,$r:calc(50% - 614.5px),$t:657px,$z:1000);
+        width: 393px;
+        height: 274px;
     }
     .banner__bg {
         @include image($url:"../images/main/background.jpg",$pos:center center,$size:cover);
@@ -31,12 +35,12 @@
         -webkit-filter: none;
     }
     .banner__img {
-        @include image($url:"../images/main/skulls-roses.svg",$pos:center bottom,$size:100%,$rep:no-repeat);
-        @include position($pos:absolute,$b:-100px,$l:calc(50% - 1110px));
-        width: 2220px;
+        @include image($url:"../images/main/skulls-roses.svg",$pos:center bottom,$size:cover,$rep:no-repeat);
+        @include position($pos:absolute,$b:-100px);
+        width: 100vw;
+        // $l:calc(50% - 1110px)
         height: 430px;
         overflow: hidden;
-        backface-visibility: hidden;
     }
 }
 .banner__container {
