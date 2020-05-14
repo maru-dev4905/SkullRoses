@@ -94,19 +94,62 @@
     }
 }
 .artist__lineup {
-    display: block;
     @include flex($dir:column);
+    display: block;
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 40px 0;
+    text-align: center;
+    ul{
+        padding: 80px 0;
+    }
     li {
+        display: inline;
         a {
             font-size: 2.313rem;
             color: $opC;
             -webkit-text-stroke: 1.5px $white;
             text-transform: uppercase;
             line-height: 1.15;
+            text-align: center;
+            letter-spacing: 3px;
+            transition: 0.3s;
+        }
+        &:not(:first-child)::before{
+            @include image($url:"../images/icon/bolt.svg",$pos:center center,$size:contain,$rep:no-repeat);
+            display: inline-block;
+            content: "";
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+        }
+        &:hover a{
+            -webkit-text-stroke: 1.5px $red;
+        }
+    }
+    .lineup__link{
+        @include flex($jusCon:center,$aliItem:center);
+        color: $red;
+        font-size: 17px;
+        font-weight: 500;
+        transition: 0.3s;
+        .lineup__link__color{
+            width: 17px;
+            height: 17px;
+            margin-right: 8px;
+            .lineup__link__icon{
+                width: 18px;
+                height: 18px;
+                display: inline-block;
+                background-color: currentColor;
+                mask-size: contain;
+                mask-position: 50% 50%;
+                -webkit-mask-image: url(../images/icon/button.svg);
+                mask-repeat: no-repeat;
+            }
+        }
+        &:hover{
+            opacity: 0.7;
         }
     }
 }
