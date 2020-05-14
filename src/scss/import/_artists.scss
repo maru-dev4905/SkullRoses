@@ -17,6 +17,14 @@
         max-width: 1000px;
         margin: 0 auto;
     }
+    &::after{
+        @include image($url:"../images/common/border.svg",$pos:center center,$size:cover,$rep:repeat-x);
+        @include position($pos:absolute,$b:-42px,$z:1000);
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 84px;
+    }
 }
 .artist__card {
     position: relative;
