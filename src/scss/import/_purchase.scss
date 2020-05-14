@@ -26,6 +26,7 @@
         @include flex($dir:row,$jusCon:center,$aliItem:center);
         transition: 0.3s;
         color: $white;
+        font-weight: 600;
         &::before {
             @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
             content: "";

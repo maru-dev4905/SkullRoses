@@ -1,2 +1,84 @@
 @import "../common/mixin";
 @import "../common/variable";
+
+.newslatter{
+    width: 100vw;
+    padding: 80px 0;
+    min-height: 430px;
+    background-color: $bgC;
+    position: relative;
+    // &::before{
+    //     @include image($url:"../images/common/sign-up-left.svg",$pos:center center,$size:contain,$rep:no-repeat);
+    //     content: "";
+    //     width: 1040px;
+    //     height: 590px;
+    //     display: inline-block;
+    //     position: absolute;
+    // }
+    .newslatter__signup{
+        @include flex($dir:column,$jusCon:center,$aliItem:center);
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -170px;
+        z-index: 2000;
+        figure{
+            @include image($url:"../images/common/skull.png",$pos:center center,$size:contain,$rep:no-repeat);
+            width: 355px;
+            height: 355px;
+        }
+        h3{
+            font-size: 28px;
+            text-transform: uppercase;
+            color: $opC;
+            -webkit-text-stroke: 1px $white;
+            letter-spacing: 1.5px;
+        }
+        p{
+            font-size: 16px;
+            color: $white;
+            padding: 20px 0;
+            font-weight: 500;
+        }
+        form{
+            @include flex($dir:column,$jusCon:center,$aliItem:center);
+            label{
+                visibility: hidden;
+                position: absolute;
+            }
+            input{
+                width: 380px;
+                height: 50px;
+                margin-bottom: 30px;
+                padding: 10px 20px;
+                text-align: center;
+                &::placeholder{
+                    font-size: 13px;
+                    font-weight:600;
+                    letter-spacing: 0.8px;
+                }
+            }
+            button{
+                @include flex($jusCon:center,$aliItem:center);
+                font-size: 17px;
+                transition: 0.3s;
+                color: $white;
+                font-weight: 600;
+                &::before{
+                    @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
+                    content: "";
+                    display: inline-block;
+                    width: 19px;
+                    height: 19px;
+                    margin-right: 10px;
+                }
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
