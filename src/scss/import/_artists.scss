@@ -7,10 +7,14 @@
     @include title($color:red,$width:230px,$height:8px);
     background-color: $bgC;
     width: 100vw;
-    height: auto;
     padding: 80px 0 150px;
+    overflow: hidden;
 
     .artist__grid {
+        @include responsive("iphone-l"){
+            grid-template-columns: 1fr;
+            width: 70%;
+        }
         @include grid($tCol:repeat(3,1fr),$gap:15px);
         @include position($pos:relative,$z:1500);
         width: 90%;
@@ -30,9 +34,15 @@
     position: relative;
     box-shadow: 7px 15px 10px 2px rgba($color: $white, $alpha: 0.1);
     &:nth-child(even) {
+        @include responsive("iphone-l"){
+            margin-top: 0;
+        }
         margin-top: 40px;
     }
     &:nth-child(odd) {
+        @include responsive("iphone-l"){
+            margin-bottom: 0;
+        }
         margin-bottom: 40px;
     }
     figure {

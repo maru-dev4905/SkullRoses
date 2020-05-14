@@ -6,7 +6,8 @@
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
-    overflow-x: hidden;
+    overflow: hidden;
+
     .banner__left__roses{
         @include position($pos:absolute,$l:calc(50% - 665px),$t:662px,$z:1000);
         width: 420px;
