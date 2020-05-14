@@ -1,61 +1,67 @@
 @import "../common/mixin";
 @import "../common/variable";
 
-.newslatter{
+.newslatter {
     width: 100vw;
     padding: 80px 0;
     min-height: 430px;
     background-color: $bgC;
     position: relative;
-    // &::before{
-    //     @include image($url:"../images/common/sign-up-left.svg",$pos:center center,$size:contain,$rep:no-repeat);
-    //     content: "";
-    //     width: 1040px;
-    //     height: 590px;
-    //     display: inline-block;
-    //     position: absolute;
-    // }
-    .newslatter__signup{
+    &::before {
+        @include image($url:"../images/common/sign-up-left.svg",$pos:center center,$size:contain,$rep:no-repeat);
+        @include position($pos:absolute,$t:-30px,$l:calc(50% - 670px),$z:500);
+        content: "";
+        width: 1040px;
+        height: 590px;
+    }
+    &::after {
+        @include image($url:"../images/common/sign-up-right.svg",$pos:center center,$size:contain,$rep:no-repeat);
+        @include position($pos:absolute,$t:-30px,$l:calc(100% - 1160px),$z:500);
+        content: "";
+        width: 1040px;
+        height: 590px;
+    }
+    .newslatter__signup {
         @include flex($dir:column,$jusCon:center,$aliItem:center);
         @include position($pos:absolute,$l:50%,$t:-170px,$z:2000);
         width: 90%;
         max-width: 1000px;
         margin: 0 auto;
         transform: translateX(-50%);
-        figure{
+        figure {
             @include image($url:"../images/common/skull.png",$pos:center center,$size:contain,$rep:no-repeat);
             width: 355px;
             height: 355px;
         }
-        h3{
+        h3 {
             @include font($size:1.75rem,$color:$opC,$letter:1.5px,$transform:uppercase);
             -webkit-text-stroke: 1px $white;
         }
-        p{
+        p {
             @include font($size:1rem,$color:$white,$weight:500);
             padding: 20px 0;
         }
-        form{
+        form {
             @include flex($dir:column,$jusCon:center,$aliItem:center);
-            label{
+            label {
                 visibility: hidden;
                 position: absolute;
             }
-            input{
+            input {
                 width: 380px;
                 height: 50px;
                 margin-bottom: 30px;
                 padding: 10px 20px;
                 text-align: center;
-                &::placeholder{
+                &::placeholder {
                     @include font($size:13px,$weight:600,$letter:0.8px);
                 }
             }
-            button{
+            button {
                 @include flex($jusCon:center,$aliItem:center);
                 @include font($size:1.063rem,$color:$white,$weight:600);
                 transition: 0.3s;
-                &::before{
+                &::before {
                     @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
                     content: "";
                     display: inline-block;
