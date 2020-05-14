@@ -8,7 +8,7 @@
     background-repeat: $rep;
 }
 // display flex mixin
-@mixin flex($dir:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,) {
+@mixin flex($dir:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,$wrap:null) {
     display: flex;
     flex-direction: $dir;
     justify-content: $jusCon;
@@ -17,6 +17,7 @@
     align-content: $aliCon;
     align-items: $aliItem;
     align-self: $aliSelf;
+    flex-wrap: $wrap;
 }
 // display grid mixin
 @mixin grid($flow:null, $tCol:null, $tRow:null, $tAre:null, $col:null, $row:null, $gap:null, $rGap:null, $cGap:null, $AtCol:null, $AtRow:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,) {
@@ -62,12 +63,8 @@
 }
 // responsive mixin
 @mixin responsive($device) {
-    @if $device == "iphone-s" {
-        @media screen and (min-width: $smallIphone) and (max-width: $minIphone) {
-            @content;
-        }
-    } @else if $device == "iphone" {
-        @media screen and (min-width: $minIphone) and (max-width: $maxIphone) {
+    @if $device == "iphone" {
+        @media screen and (max-width: $maxIphone) {
             @content;
         }
     } @else if $device == "tablet" {
@@ -75,7 +72,7 @@
             @content;
         }
     } @else if $device == "iphone-l" {
-        @media screen and (min-width: $minIphone) and (max-width: $maxIphonex) and (orientation: landscape) {
+        @media screen and (min-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
             @content;
         }
     } @else if $device == "ipad-l" {

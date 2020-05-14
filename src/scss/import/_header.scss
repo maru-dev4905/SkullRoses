@@ -13,7 +13,13 @@
     }
 }
 .header__nav {
-    @include flex($dir:row,$aliItem:center);
+    @include responsive("iphone-l"){
+        flex-wrap: wrap;
+    }
+    @include responsive("ipad-l"){
+        flex-wrap: wrap;
+    }
+    @include flex($aliItem:center);
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
@@ -32,6 +38,24 @@
         }
     }
     .header__logo{
+        @include responsive("iphone"){
+            width: 100%;
+            order: 0;
+            transform: translate(0);
+            margin-bottom: 13px;
+        }
+        @include responsive("iphone-l"){
+            width: 100%;
+            order: 0;
+            transform: translate(0);
+            margin-bottom: 13px;
+        }
+        @include responsive("ipad-l"){
+            width: 100%;
+            order: 0;
+            transform: translate(0);
+            margin-bottom: 13px;
+        }
         margin: 0 auto;
         transform: translateX(-15px);
         a {
@@ -39,9 +63,21 @@
             display: block;
             width: 180px;
             height: 80px;
+            margin: 0 auto;
         }  
     } 
     li{
+        @include responsive("iphone"){
+            display: none;
+        }
+        @include responsive("iphone-l"){
+            order: 1;
+            margin: 0 auto;
+        }
+        @include responsive("ipad-l"){
+            order: 1;
+            margin: 0 auto;
+        }
         height: 100%;
         margin-right: 30px;
         a{
