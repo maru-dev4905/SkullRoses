@@ -1,0 +1,118 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+.purchase{
+    @include position($pos:relative,$z:20);
+    @include title($color:wine,$width:230px,$height:8px);
+    width: 100vw;
+    height: 200vh;
+    padding: 150px 0;
+    background: linear-gradient(0deg, #ff365c 0, #8d3243 80%, #801b2e);
+
+    &::before{
+        @include image($url:"../images/main/swirls-2.svg",$pos:center center,$size:cover,$rep:no-repeat);
+        @include position($pos:absolute,$t:0,$l:0,$z:-10);
+        content: "";
+        width: 100vw;
+        height: 100%;
+    }
+    .purchase__title{
+        @include flex($dir:column);
+        width: 90%;
+        max-width: 1000px;
+
+    }
+    a {
+        @include flex($dir:row,$jusCon:center,$aliItem:center);
+        transition: 0.3s;
+        color: $white;
+        &::before {
+            @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
+            content: "";
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin-right: 10px;
+        }
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+.purchase__grid{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+
+    .purchase__card{
+        background-color: $white;
+        border-radius: 30px;
+        padding: 60px 50px 80px 50px;
+        position: relative;
+        .purchase__card__content{
+            h3,h4{
+                text-transform: uppercase;
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 34px;
+            }
+            h4{
+                color: $lightRed;
+                padding-bottom: 20px;
+            }
+            em{
+                text-transform: none;
+                font-style: italic;
+            }
+            p{
+                line-height: 23px;
+            }
+            ul{
+                padding: 40px 0 50px 0;
+                li{
+                    margin-top: 15px;
+                    line-height: 20px;
+                    padding-left: 25px;      
+                    list-style-position: inside; 
+                    position: relative;             
+                    &:first-child{
+                        margin: 0;
+                    }
+                    &::before{
+                        @include image($url:"../images/icon/star.svg",$pos:center center,$size:contain,$rep:no-repeat);
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 4px;
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+            strong{
+                color: $lightRed;
+                display: block;
+                margin-bottom: 30px;
+                font-weight: 700;
+            }
+        }
+        .purchase__card__link{
+            padding: 25px 50px;
+            background-color: $lightRed;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 0 0 25px 25px;
+            width: 100%;
+            a{
+                justify-content: flex-start;
+            }
+        }
+    }
+}
