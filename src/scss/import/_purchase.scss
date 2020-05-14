@@ -40,34 +40,27 @@
     }
 }
 .purchase__grid{
+    @include grid($tCol:repeat(2,1fr),$gap:20px);
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    justify-content: center;
     margin-top: 50px;
 
     .purchase__card{
+        position: relative;
         background-color: $white;
         border-radius: 30px;
         padding: 60px 50px 80px 50px;
-        position: relative;
         .purchase__card__content{
             h3,h4{
-                text-transform: uppercase;
-                font-size: 30px;
-                font-weight: 500;
-                line-height: 34px;
+                @include font($size:1.875rem,$weight:500,$height:2.125rem,$transform:uppercase);
             }
             h4{
                 color: $lightRed;
                 padding-bottom: 20px;
             }
             em{
-                text-transform: none;
-                font-style: italic;
+                @include font($transform:none,$style:italic);
             }
             p{
                 line-height: 23px;
@@ -75,20 +68,17 @@
             ul{
                 padding: 40px 0 50px 0;
                 li{
+                    position: relative;             
                     margin-top: 15px;
                     line-height: 20px;
                     padding-left: 25px;      
-                    list-style-position: inside; 
-                    position: relative;             
                     &:first-child{
                         margin: 0;
                     }
                     &::before{
                         @include image($url:"../images/icon/star.svg",$pos:center center,$size:contain,$rep:no-repeat);
+                        @include position($pos:absolute,$l:0,$t:4px);
                         content: "";
-                        position: absolute;
-                        left: 0;
-                        top: 4px;
                         display: inline-block;
                         width: 15px;
                         height: 15px;
@@ -96,20 +86,17 @@
                 }
             }
             strong{
-                color: $lightRed;
+                @include font($weight:700,$color:$lightRed);
                 display: block;
                 margin-bottom: 30px;
-                font-weight: 700;
             }
         }
         .purchase__card__link{
+            @include position($pos:absolute,$b:0,$l:0);
             padding: 25px 50px;
-            background-color: $lightRed;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            border-radius: 0 0 25px 25px;
             width: 100%;
+            background-color: $lightRed;
+            border-radius: 0 0 25px 25px;
             a{
                 justify-content: flex-start;
             }

@@ -40,7 +40,7 @@
     align-self: $aliSelf;
 }
 // font mixin
-@mixin font($size:null, $color:null, $weight:null, $transform:null, $letter:null, $break:null, $height:null, $align:null) {
+@mixin font($size:null, $color:null, $weight:null, $transform:null, $letter:null, $break:null, $height:null, $align:null,$style:null) {
     font-size: $size;
     color: $color;
     font-weight: $weight;
@@ -49,6 +49,7 @@
     word-break: $break;
     line-height: $height;
     text-align: $align;
+    font-style: $style;
 }
 // position mixin
 @mixin position($pos:null, $t:null, $l:null, $b:null, $r:null, $z:null) {
@@ -90,15 +91,15 @@
         @include font($color:$opC, $transform:uppercase,$letter:1.5px);
         margin: 0 auto 60px;
         text-align: center;
-        
-        h2{
+
+        h2 {
             @include flex($dir:column,$jusCon:center,$aliItem:Center);
             font-size: 2.8125rem;
             width: 90%;
             max-width: 1000px;
             -webkit-text-stroke: 1.5px $white;
 
-            &::after{
+            &::after {
                 @if($color == wine) {
                     @include image($url:"../images/common/underline-wine.svg",$pos:center center,$size:100%,$rep:no-repeat);
                 } @else {
@@ -110,7 +111,7 @@
                 height: $height;
             }
         }
-        p{
+        p {
             @include font($color:$white,$size:0.938rem,$height:1.6875rem,$weight:600,$transform:none);
             padding: 0 10px;
             max-width: 640px;
