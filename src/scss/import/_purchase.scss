@@ -5,7 +5,7 @@
     @include position($pos:relative,$z:20);
     @include title($color:wine,$width:230px,$height:8px);
     width: 100vw;
-    height: 200vh;
+    height: auto;
     padding: 150px 0;
     background: linear-gradient(0deg, #ff365c 0, #8d3243 80%, #801b2e);
 
