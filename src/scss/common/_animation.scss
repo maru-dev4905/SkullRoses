@@ -1,19 +1,27 @@
 @import "../common/variable";
-@keyframes fadeIn{
-    from{
+@keyframes fadeIn {
+    from {
         opacity: 0;
     }
-    to{
+    to {
         opacity: 1;
     }
 }
-@keyframes fadeUp{
-    from{
+@keyframes fadeUp {
+    from {
         opacity: 0;
         transform: translateY(20px);
     }
-    to{
+    to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+@keyframes shake {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(-4deg); }
+    40% { transform: rotate(4deg); }
+    60% { transform: rotate(-4deg); }
+    80% { transform: rotate(4deg); }
+    100% { transform: rotate(0); }
 }

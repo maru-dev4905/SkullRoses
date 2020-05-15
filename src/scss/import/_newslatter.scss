@@ -1,5 +1,6 @@
 @import "../common/mixin";
 @import "../common/variable";
+@import "../common/animation";
 
 .newslatter {
     position: relative;
@@ -28,7 +29,7 @@
         max-width: 1000px;
         transform: translateX(-50%);
         text-align: center;
-        figure {
+        .newslatter__signup--skull {
             @include image($url:"../images/common/skull.png",$pos:center center,$size:contain,$rep:no-repeat);
             width: 355px;
             height: 355px;
