@@ -43,6 +43,7 @@
         li{
             height: 100%;
             margin-bottom: 30px;
+            animation-fill-mode: backwards;
             a{
                 @include font($size:1.094rem,$transform:uppercase,$color:$white,$weight:600);
                 display: block;

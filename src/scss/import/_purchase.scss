@@ -8,7 +8,7 @@
     @include responsive("iphone-l"){
         padding: 80px 0;
     }
-    @include position($pos:relative,$z:20);
+    @include position($pos:relative,$z:300);
     @include title($color:wine,$width:230px,$height:8px);
     width: 100vw;
     height: auto;

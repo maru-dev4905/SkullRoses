@@ -5,7 +5,7 @@
     @include responsive("iphone"){
         padding: 80px 0 80px;
     }
-    @include position($pos:relative,$z:1000);
+    @include position($pos:relative,$z:500);
     @include image($url:"../images/main/swirls-1.svg",$pos:center center,$size:cover,$rep:no-repeat);
     @include title($color:red,$width:230px,$height:8px);
     background-color: $bgC;
