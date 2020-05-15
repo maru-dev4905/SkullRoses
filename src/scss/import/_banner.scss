@@ -9,12 +9,12 @@
     overflow: hidden;
 
     .banner__left__roses{
-        @include position($pos:absolute,$l:calc(50% - 665px),$t:662px,$z:1000);
+        @include position($pos:absolute,$l:calc(50% - 665px),$t:656px,$z:1000);
         width: 420px;
         height: 485px;
     }
     .banner__right__roses{
-        @include position($pos:absolute,$r:calc(50% - 614.5px),$t:657px,$z:1000);
+        @include position($pos:absolute,$r:calc(50% - 614.5px),$t:648px,$z:1000);
         width: 393px;
         height: 274px;
     }
