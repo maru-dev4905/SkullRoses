@@ -4,12 +4,12 @@ const nav = document.querySelector(".side");
 const MOBILE = "719";
 
 let navItem = document.querySelectorAll(".side--nav--item");
-
+let colorCheck = "hide";
 let hambugerCheck = "close";
 let windowWidth;
 let windowHeight;
 
-// Hambuger menu show / hide function 
+// Hambuger menu show / hide function
 window.addEventListener("resize", () => {
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
@@ -35,7 +35,6 @@ HambugerBtn.addEventListener("click", () => {
             navItem[i].style.animationDuration = "1s";
             navItem[i].style.animationDelay = "0." + i + "s";
         }
-        
     } else {
         nav.style.zIndex = "-5000";
         nav.style.opacity = "0";
@@ -46,4 +45,18 @@ HambugerBtn.addEventListener("click", () => {
             navItem[i].style.animationDelay = "";
         }
     }
+    colorChange();
 });
+
+//Hambuger button color change function
+function colorChange() {
+    if (colorCheck == "show") {
+        HambugerBtn.style.backgroundColor = "#fff";
+        HambugerBtn.style.boxShadow = "10px 10px 10px rgba(0,0,0,0.2)"
+        colorCheck = "hide";
+    } else {
+        HambugerBtn.style.backgroundColor = "#3a112f";
+        HambugerBtn.style.boxShadow = "10px 10px 10px rgba(0,0,0,0)";
+        colorCheck = "show";
+    }
+}
