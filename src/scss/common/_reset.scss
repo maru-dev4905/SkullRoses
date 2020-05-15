@@ -70,3 +70,9 @@ button{
 ::selection{
 	background-color: #d52316;
 }
+.sr{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}

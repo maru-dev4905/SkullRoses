@@ -31,7 +31,7 @@
             color: $red;
         }
         &:hover{
-            background-color: red;
+            background-color: $red;
             a{
                 color: $white;
             }
@@ -86,7 +86,7 @@
             padding: 11px;
             transition: 0.4s;
             &:hover{
-                color: #d52316;
+                color: $red;
             }
         }
     }
