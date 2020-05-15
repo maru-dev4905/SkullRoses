@@ -3,7 +3,7 @@
 @import "../common/animation";
 @import "./hamburger";
 .side{
-    @include position($pos:fixed,$t:0,$l:0);
+    @include position($pos:fixed,$t:0,$l:0,$z:0);
     background-color: $bgC;
     width: 100vw;
     height: 100vh;
