@@ -3,8 +3,7 @@
 
 .header {
     @include flex($jusCon:center,$aliItem:center);
-    position: absolute;
-    z-index: 1000;
+    @include position($pos:absolute,$z:1000,$t:0,$l:0);
     width: 100vw;
     padding: 30px 0;
     nav {
@@ -13,44 +12,44 @@
     }
 }
 .header__nav {
-    @include responsive("iphone-l"){
+    @include responsive("iphone-l") {
         flex-wrap: wrap;
     }
-    @include responsive("ipad-l"){
+    @include responsive("ipad-l") {
         flex-wrap: wrap;
     }
     @include flex($aliItem:center);
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
-    .header__nav--item{
+    .header__nav--item {
         background-color: $white;
         padding: 4.5px 10.5px;
         transition: 0.3s;
-        a{
+        a {
             color: $red;
         }
-        &:hover{
+        &:hover {
             background-color: $red;
-            a{
+            a {
                 color: $white;
             }
         }
     }
-    .header__logo{
-        @include responsive("iphone"){
+    .header__logo {
+        @include responsive("iphone") {
             width: 100%;
             order: 0;
             transform: translate(0);
             margin-bottom: 13px;
         }
-        @include responsive("iphone-l"){
+        @include responsive("iphone-l") {
             width: 100%;
             order: 0;
             transform: translate(0);
             margin-bottom: 13px;
         }
-        @include responsive("ipad-l"){
+        @include responsive("ipad-l") {
             width: 100%;
             order: 0;
             transform: translate(0);
@@ -64,28 +63,28 @@
             width: 180px;
             height: 80px;
             margin: 0 auto;
-        }  
-    } 
-    li{
-        @include responsive("iphone"){
+        }
+    }
+    li {
+        @include responsive("iphone") {
             display: none;
         }
-        @include responsive("iphone-l"){
+        @include responsive("iphone-l") {
             order: 1;
             margin: 0 auto;
         }
-        @include responsive("ipad-l"){
+        @include responsive("ipad-l") {
             order: 1;
             margin: 0 auto;
         }
         height: 100%;
         margin-right: 30px;
-        a{
+        a {
             @include font($size:0.9375rem,$transform:uppercase,$color:$white,$weight:600);
             display: block;
             padding: 11px;
             transition: 0.4s;
-            &:hover{
+            &:hover {
                 color: $red;
             }
         }

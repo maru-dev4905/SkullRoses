@@ -24,7 +24,7 @@
         height: 30px;
         display: block;
         transition: 0.3s;
-        &:hover{
+        &:hover {
             opacity: 0.5;
         }
     }
@@ -53,11 +53,11 @@
             a {
                 @include font($size:16px,$color:$white,$transform:uppercase,$weight:600);
                 transition: 0.3s;
-                &:hover{
+                &:hover {
                     color: $red;
                 }
             }
-            &:last-child{
+            &:last-child {
                 margin: 0;
             }
         }

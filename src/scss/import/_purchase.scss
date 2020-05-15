@@ -10,6 +10,7 @@
     }
     @include position($pos:relative,$z:300);
     @include title($color:wine,$width:230px,$height:8px);
+    @include link;
     width: 100vw;
     height: auto;
     padding: 150px 0;
@@ -27,6 +28,7 @@
         max-width: 1000px;
         .purchase__title__container{
             @include flex($dir:column,$jusCon:center,$aliItem:center);
+            @include link;
             max-width: 620px;
             margin: 0 auto;
             h2{
@@ -39,27 +41,11 @@
             p{
                 margin-bottom: 40px;
             }
-            
+            a{
+                text-transform: none;
+            }
         }
     }
-    a {
-        @include flex($dir:row,$jusCon:center,$aliItem:center);
-        transition: 0.3s;
-        color: $white;
-        font-weight: 600;
-        &::before {
-            @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
-            content: "";
-            display: inline-block;
-            width: 19px;
-            height: 19px;
-            margin-right: 10px;
-        }
-        &:hover {
-            opacity: 0.6;
-        }
-    }
-   
 }
 .purchase__grid{
     @include responsive("iphone"){

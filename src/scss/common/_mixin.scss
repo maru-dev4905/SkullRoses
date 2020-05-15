@@ -115,3 +115,22 @@
         }
     }
 }
+// link button mixin
+@mixin link {
+    .link{
+        @include flex($dir:row, $jusCon:center,$aliItem:center);
+        @include font($size:1.063rem,$color:$white,$weight:600);
+        transition: 0.3s;
+        &:hover{
+            opacity: 0.6;
+        }
+        &::before{
+            @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
+            content: "";
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin-right: 10px;
+        }
+    }
+}

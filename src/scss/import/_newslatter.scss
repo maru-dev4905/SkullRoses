@@ -44,9 +44,10 @@
         }
         form {
             @include flex($dir:column,$jusCon:center,$aliItem:center);
+            @include link;
             label {
-                visibility: hidden;
                 position: absolute;
+                visibility: hidden;
             }
             input {
                 width: 380px;
@@ -56,22 +57,6 @@
                 text-align: center;
                 &::placeholder {
                     @include font($size:13px,$weight:600,$letter:0.8px);
-                }
-            }
-            button {
-                @include flex($jusCon:center,$aliItem:center);
-                @include font($size:1.063rem,$color:$white,$weight:600);
-                transition: 0.3s;
-                &::before {
-                    @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
-                    content: "";
-                    display: inline-block;
-                    width: 19px;
-                    height: 19px;
-                    margin-right: 10px;
-                }
-                &:hover {
-                    opacity: 0.6;
                 }
             }
         }
