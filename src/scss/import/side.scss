@@ -1,13 +1,16 @@
 @import "../common/mixin";
 @import "../common/variable";
+@import "../common/animation";
 
 .side{
-    @include position($pos:fixed,$t:0,$l:0,$z:5000);
+    @include position($pos:fixed,$t:0,$l:0);
     background-color: $bgC;
     width: 100vw;
     height: 100vh;
+    opacity: 0;
+    // transition: 0.3s;
 
-    .side__nav{
+    .side--nav{
         @include flex($dir:column,$jusCon:center,$aliItem:center);
         padding: 30px 0;
         width: 100%;
@@ -15,7 +18,7 @@
         .side__logo{
             margin: 0 auto;
             margin-bottom: 50px;
-            a {
+            a { 
                 @include image($url:"../images/logo/logo@2x.png",$pos:center center,$size:contain,$rep:no-repeat);
                 display: block;
                 width: 180px;
@@ -46,29 +49,28 @@
                 padding: 11px;
                 transition: 0.4s;
                 &:hover{
-                    color: #d52316;
+                    color: $red;
                 }
             }
         }
     }
-
-    .side--btn{
-        @include position($pos:fixed,$b:20px,$r:30px,$z:5100);
-        width: 65px;
-        height: 65px;
-        background-color: $white;
-        border-radius: 50%;
-        box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.2);
-        .side--hambuger__icon{
-            @include position($pos:absolute,$t:50%,$l:50%);
-            transform: translate(-50%,-50%);
-            .hambuger--line{
-                width: 22px;
-                height: 3px;
-                background-color: $red;
-                display: block;
-                margin: 4px 0;
-            }
+}
+.side--btn{
+    @include position($pos:fixed,$b:20px,$r:30px,$z:5100);
+    width: 65px;
+    height: 65px;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.2);
+    .side--hambuger__icon{
+        @include position($pos:absolute,$t:50%,$l:50%);
+        transform: translate(-50%,-50%);
+        .hambuger--line{
+            width: 22px;
+            height: 3px;
+            background-color: $red;
+            display: block;
+            margin: 4px 0;
         }
     }
 }
