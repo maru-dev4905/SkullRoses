@@ -2,6 +2,12 @@
 @import "../common/variable";
 
 .purchase{
+    @include responsive("iphone"){
+        padding: 120px 0 180px 0;
+    }
+    @include responsive("iphone-l"){
+        padding: 80px 0;
+    }
     @include position($pos:relative,$z:20);
     @include title($color:wine,$width:230px,$height:8px);
     width: 100vw;
@@ -17,10 +23,24 @@
         height: 100%;
     }
     .purchase__title{
-        @include flex($dir:column);
         width: 90%;
         max-width: 1000px;
-
+        .purchase__title__container{
+            @include flex($dir:column,$jusCon:center,$aliItem:center);
+            max-width: 620px;
+            margin: 0 auto;
+            h2{
+                @include responsive("iphone"){
+                    width: 100%;
+                    font-size: 2.25rem;
+                }
+                width: 70%;
+            }
+            p{
+                margin-bottom: 40px;
+            }
+            
+        }
     }
     a {
         @include flex($dir:row,$jusCon:center,$aliItem:center);
@@ -39,8 +59,15 @@
             opacity: 0.6;
         }
     }
+   
 }
 .purchase__grid{
+    @include responsive("iphone"){
+        grid-template-columns: 1fr;
+    }
+    @include responsive("iphone-l"){
+        grid-template-columns: 1fr; 
+    }
     @include grid($tCol:repeat(2,1fr),$gap:20px);
     width: 90%;
     max-width: 1000px;
