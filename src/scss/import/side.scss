@@ -8,7 +8,7 @@
     width: 100vw;
     height: 100vh;
     opacity: 0;
-    // transition: 0.3s;
+    transition: 0.3s;
 
     .side--nav{
         @include flex($dir:column,$jusCon:center,$aliItem:center);
@@ -56,12 +56,14 @@
     }
 }
 .side--btn{
-    @include position($pos:fixed,$b:20px,$r:30px,$z:5100);
+    @include position($pos:fixed,$b:20px,$r:30px);
+    opacity: 0;
     width: 65px;
     height: 65px;
     background-color: $white;
     border-radius: 50%;
     box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.2);
+    transition: 0.3s;
     .side--hambuger__icon{
         @include position($pos:absolute,$t:50%,$l:50%);
         transform: translate(-50%,-50%);
