@@ -19,7 +19,8 @@
     },
     "homepage": "https://github.com/maru-dev4905/SkullRoses#readme",
     "dependencies": {
-        "aos": "^2.3.4"
+        "aos": "^2.3.4",
+        "hamburgers": "^1.1.3"
     },
     "devDependencies": {
         "@babel/core": "^7.9.6",

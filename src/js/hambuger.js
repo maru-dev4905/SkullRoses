@@ -1,5 +1,8 @@
-const HambugerBtn = document.querySelector(".side--btn");
 const nav = document.querySelector(".side");
+const lineTop = document.querySelector(".line--top");
+const lineMiddle = document.querySelector(".line--middle");
+const lineBottom = document.querySelector(".line--bottom");
+const hamburger = document.querySelector(".hamburger");
 
 const MOBILE = "719";
 
@@ -9,23 +12,25 @@ let hambugerCheck = "close";
 let windowWidth;
 let windowHeight;
 
-// Hambuger menu show / hide function
+// hamburger menu show / hide function
 window.addEventListener("resize", () => {
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
     console.log(windowWidth, windowHeight);
 
     if (windowWidth <= MOBILE) {
-        HambugerBtn.style.opacity = "1";
-        HambugerBtn.style.zIndex = "5500";
+        hamburger.style.opacity = "1";
+        hamburger.style.zIndex = "5500";
     } else {
-        HambugerBtn.style.opacity = "0";
-        HambugerBtn.style.zIndex = "-5500";
+        hamburger.style.opacity = "0";
+        hamburger.style.zIndex = "-5500";
     }
 });
 
 // Hambuger menu click event
-HambugerBtn.addEventListener("click", () => {
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("is-active");
+
     if (hambugerCheck == "close") {
         nav.style.zIndex = "5000";
         nav.style.opacity = "1";
@@ -51,12 +56,14 @@ HambugerBtn.addEventListener("click", () => {
 //Hambuger button color change function
 function colorChange() {
     if (colorCheck == "show") {
-        HambugerBtn.style.backgroundColor = "#fff";
-        HambugerBtn.style.boxShadow = "10px 10px 10px rgba(0,0,0,0.2)"
+        hamburger.style.backgroundColor = "#fff";
+        hamburger.style.boxShadow = "10px 10px 10px rgba(0,0,0,0.2)"
+        document.querySelector(".hamburger-inner").style.backgroundColor="#d52316";
         colorCheck = "hide";
     } else {
-        HambugerBtn.style.backgroundColor = "#3a112f";
-        HambugerBtn.style.boxShadow = "10px 10px 10px rgba(0,0,0,0)";
+        hamburger.style.backgroundColor = "#3a112f";
+        hamburger.style.boxShadow = "10px 10px 10px rgba(0,0,0,0)";
+        document.querySelector(".hamburger-inner").style.backgroundColor="#fff";
         colorCheck = "show";
     }
 }
