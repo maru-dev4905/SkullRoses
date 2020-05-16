@@ -1,8 +1,9 @@
 @import "../common/mixin";
 @import "../common/variable";
 
-.header__nav .header__nav--item{
+.header__nav--passes{
     background-color: $red;
+    padding: 4.5px 10.5px;
     a{ color: $white; }
 }
 .passes{
