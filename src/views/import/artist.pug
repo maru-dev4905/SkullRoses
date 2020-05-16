@@ -1,0 +1,28 @@
+include ../common/mixin
+include ../common/variable
+
+section.artist
+    +sectionTitle("2020 artist")
+    .artist__grid
+        +artistCard(
+            "0",
+            "#",
+            "./images/main/billy-kids-facebook-w600h600.jpg",
+            "billy & the kids"
+        )
+        +artistCard(
+            "250",
+            "#",
+            "./images/main/oteil-press-2-web-high-res-whitney-wangsgaard-w600h600.jpg",
+            "oteil & friends"
+        )
+        +artistCard(
+            "500",
+            "#",
+            "./images/main/voodoodeadpress-katie-fox-w600h600.png",
+            "voodoo dead"
+        )
+    .artist__lineup
+        ul
+            each text, index in artistLineup
+                +linkList("fade-in", index*100, "#", text)

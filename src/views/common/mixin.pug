@@ -1,0 +1,52 @@
+mixin sectionTitle(text)
+    .section__title
+        h2(
+            data-aos="fade-up"
+            data-aos-duration="1000"
+        )= text
+
+mixin detailSectionTitle(classes, h2, p, href, a)
+    .section__title(class= classes)
+        div(class= classes+"__container")
+            h2(
+                data-aos="fade-up"
+                data-aos-duration="700"
+            )= h2
+            p(
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="300"
+            )= p
+            a(
+                href= href
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="700"
+            )
+                span.link= a
+
+
+mixin artistCard(delay,url,src,text)
+    .artist__card(
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay= delay
+            )
+                a.artist__card__img(href= url)
+                    figure
+                        img(
+                            src= src,
+                            alt= text)
+                .artist__card__title
+                    h4= text
+                    a(href= url class="artist__card__link") More info
+
+mixin linkList(aos, delay, url, text)
+    li(
+        data-aos= aos
+        data-aos-delay= delay
+    )
+        a(href= url)= text
+
+mixin list(text)
+    li= text

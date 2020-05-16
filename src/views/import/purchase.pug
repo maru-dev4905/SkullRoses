@@ -1,0 +1,44 @@
+include ../common/mixin
+include ../common/variable
+
+section.purchase
+    +detailSectionTitle("purchase__title", purchaseH2, purchaseP, "./passes.html", purchaseA)
+    .purchase__grid
+        .purchase__card(
+            data-aos="zoom-in"
+            data-aos-duration="700"
+        )
+            .purchase__card__content
+                h3 3 Day pass
+                h4 ga
+                p General Admission access to all three-days of skull & Roses:
+                ul
+                    each text in purchase3PASS
+                        +list(text)
+                strong Tier 2: $229 Limited Supplices Last
+                .purchase__card__link
+                    a.link(
+                        href="https://www.eventbrite.com/e/skull-roses-festival-tickets-79492605523"
+                        target="_blank"    
+                    ) Buy Pass
+        .purchase__card(
+            data-aos="zoom-in"
+            data-aos-duration="700"
+            data-aos-delay="300"
+        )
+            .purchase__card__content
+                h3 3.5 Day pass
+                h4 ga 
+                    em Plus
+                p Enjoy the pass and the perks with GA 
+                    em Plus:
+                ul
+                    each text in purchase35PASS
+                        +list(text)
+                strong Tier 3: $499
+            .purchase__card__link
+                a.link(
+                    href="https://www.eventbrite.com/e/skull-roses-festival-tickets-79492605523"
+                    target="_blank"    
+                ) Buy Pass
+                
