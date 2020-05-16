@@ -11,6 +11,20 @@
         height: 100%;
     }
 }
+#header--nav--item {
+    background-color: $white;
+    padding: 4.5px 10.5px;
+    transition: 0.3s;
+    a {
+        color: $red;
+    }
+    &:hover {
+        background-color: $red;
+        a {
+            color: $white;
+        }
+    }
+}
 .header__nav {
     @include responsive("iphone-l") {
         flex-wrap: wrap;
@@ -22,20 +36,6 @@
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
-    .header__nav--item {
-        background-color: $white;
-        padding: 4.5px 10.5px;
-        transition: 0.3s;
-        a {
-            color: $red;
-        }
-        &:hover {
-            background-color: $red;
-            a {
-                color: $white;
-            }
-        }
-    }
     .header__logo {
         @include responsive("iphone") {
             width: 100%;

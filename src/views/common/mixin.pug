@@ -45,8 +45,9 @@ mixin linkList(aos, delay, url, text, classes)
     li(
         data-aos= aos
         data-aos-delay= delay
+        class= classes
     )
-        a(href= url class= classes)= text
+        a(href= url)= text
 
 mixin list(text)
     li= text

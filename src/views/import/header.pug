@@ -4,17 +4,12 @@ include ../common/variable
 header.header
     nav
         ul.header__nav
-            li.nav__item(class="header__nav--item")
+            li#side__nav--item(class="header--nav--item")
                 a(href="./passes.html") passes
-            li.nav__item
-                a(href="./lineup.html") 2020 line up
-            li.nav__item
-                a(href="./schedule.html") schedule
+            +linkList("","","./lineup.html",    "2020 line up"  ,"nav__item")
+            +linkList("","","./schedule.html",  "schedule"      ,"nav__item")
             h1.header__logo
                 a(href="./index.html")
-            li.nav__item
-                a(href="./experience.html") experience 
-            li.nav__item
-                a(href="./lodging.html") lodging
-            li.nav__item
-                a(href="./faqs.html") faqs
+            +linkList("","","./experience.html","experience"    ,"nav__item")
+            +linkList("","","./lodging.html",   "lodging"       ,"nav__item")
+            +linkList("","","./faqs.html",      "faqs"          ,"nav__item")
