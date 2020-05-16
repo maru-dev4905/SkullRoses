@@ -50,3 +50,8 @@ mixin linkList(aos, delay, url, text)
 
 mixin list(text)
     li= text
+
+mixin sns(href, text)
+    a(href= href class="footer__"+text)
+        span.sr= text
+        i.footer__sns__ico

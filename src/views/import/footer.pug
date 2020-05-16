@@ -1,0 +1,17 @@
+include ../common/mixin
+include ../common/variable
+
+footer.footer
+    .footer__container
+        nav.footer__sns
+            +sns("https://twitter.com/skullandrosesCA",                                                 "twitter")
+            +sns("https://www.facebook.com/SkullandRoses4/",                                            "facebook")
+            +sns("https://www.instagram.com/skullandrosesventura/",                                     "instagram")
+            +sns("https://open.spotify.com/user/2stndhp7h8vqr62dl9bu254o2?si=VXVEx0-FTnKhfUwHYshVxw",   "noopener")
+        nav.footer__nav
+            ul
+                +linkList("","","#","contact")
+                +linkList("","","#","sponsors")
+                +linkList("","","#","terms and conditions")
+                +linkList("","","#","news")
+                +linkList("","","#","volunteer")
