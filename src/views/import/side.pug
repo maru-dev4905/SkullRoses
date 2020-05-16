@@ -6,9 +6,10 @@ include ../common/variable
         ul.side--nav
             h1.side__logo
                 a(href="/")
-            +linkList("","","#","passes")
-            +linkList("","","#","2020 line up")
-            +linkList("","","#","schedule")
-            +linkList("","","#","experience")
-            +linkList("","","#","lodging")
-            +linkList("","","#","faqs")
+            li#side__nav--item(class="side--nav--item")
+                a(href="#") passes
+            +linkList("","","#","2020 line up", "side--nav--item")
+            +linkList("","","#","schedule",     "side--nav--item")
+            +linkList("","","#","experience",   "side--nav--item")
+            +linkList("","","#","lodging",      "side--nav--item")
+            +linkList("","","#","faqs",         "side--nav--item")
