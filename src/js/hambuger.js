@@ -16,7 +16,6 @@ let windowHeight;
 window.addEventListener("resize", () => {
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
-    console.log(windowWidth, windowHeight);
 
     if (windowWidth <= MOBILE) {
         hamburger.style.opacity = "1";
