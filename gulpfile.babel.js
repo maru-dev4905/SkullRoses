@@ -7,13 +7,14 @@ import csso from "gulp-csso";
 import bro from "gulp-bro";
 import babelify from "babelify";
 import autoprefixer from "gulp-autoprefixer";
+import gPug from "gulp-pug";
 
 sass.compiler = require("node-sass");
 
 const routes = {
-    html: {
-        watch: "src/*.html",
-        src: "src/**",
+    pug: {
+        watch: "src/**/**/*.pug",
+        src: "src/*.pug",
         dest:"build"
     },
     img:{
@@ -34,8 +35,9 @@ const routes = {
 
 const view = () =>
     gulp
-        .src(routes.html.src)
-        .pipe(gulp.dest(routes.html.dest));
+        .src(routes.pug.src)
+        .pipe(gPug())
+        .pipe(gulp.dest(routes.pug.dest));
 
 const style = () =>
     gulp
@@ -70,7 +72,7 @@ const images = () =>
             .pipe(gulp.dest(routes.img.dest));
 
 const watch = () =>
-        gulp.watch(routes.html.watch, view);
+        gulp.watch(routes.pug.watch, view);
         gulp.watch(routes.sass.watch, style);
         gulp.watch(routes.js.watch, js);
 
