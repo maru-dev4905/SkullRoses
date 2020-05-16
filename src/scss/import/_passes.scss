@@ -1,6 +1,10 @@
 @import "../common/mixin";
 @import "../common/variable";
 
+.header__nav .header__nav--item{
+    background-color: $red;
+    a{ color: $white; }
+}
 .passes{
     @include position($pos:relative,$z:500);
     @include title($color:red,$width:237px,$height:8px);
