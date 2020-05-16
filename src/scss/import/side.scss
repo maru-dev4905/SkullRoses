@@ -26,20 +26,7 @@
                 margin: 0 auto;
             }  
         } 
-        .side__nav--item{
-            background-color: $white;
-            padding: 4.5px 10.5px;
-            transition: 0.3s;
-            a{
-                color: $red;
-            }
-            &:hover{
-                background-color: $red;
-                a{
-                    color: $white;
-                }
-            }
-        }
+        
         li{
             height: 100%;
             margin-bottom: 30px;
@@ -53,6 +40,20 @@
                     color: $red;
                 }
             }
+        }
+    }
+}
+.side__nav--item{
+    background-color: $white;
+    padding: 4.5px 10.5px;
+    transition: 0.3s;
+    a{
+        color: $red;
+    }
+    &:hover{
+        background-color: $red;
+        a{
+            color: $white;
         }
     }
 }

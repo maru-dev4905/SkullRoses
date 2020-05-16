@@ -6,6 +6,11 @@
     padding: 4.5px 10.5px;
     a{ color: $white; }
 }
+.side__nav--passes{
+    background-color: $red;
+    padding: 4.5px 10.5px;
+    a{ color: $white; }
+}
 .passes{
     @include position($pos:relative,$z:500);
     @include title($color:red,$width:237px,$height:8px);
