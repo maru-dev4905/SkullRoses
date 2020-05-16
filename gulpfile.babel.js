@@ -12,7 +12,7 @@ sass.compiler = require("node-sass");
 
 const routes = {
     html: {
-        watch: "src/**",
+        watch: "src/*.html",
         src: "src/**",
         dest:"build"
     },
