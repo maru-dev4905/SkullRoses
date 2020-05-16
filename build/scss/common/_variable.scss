@@ -1,0 +1,15 @@
+// break point
+$minIphone: 719px;
+$maxIphone: 943px;
+$minTablet: $maxIphone + 1;
+$maxTablet: 1040px;
+
+// color variable
+$white: #fff;
+$lightRed: #ff365c;
+$red: #d52316;
+$bgC: #3a112f;
+$darkBgC: #340f2a;
+$opC: rgba($color:$white, $alpha: 0);
+
+$underColor:null;

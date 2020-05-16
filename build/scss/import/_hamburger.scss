@@ -1,0 +1,8 @@
+@import "../common/variable";
+
+$hamburger-types     : (collapse);
+$hamburger-layer-width         : 22px;
+$hamburger-layer-height        : 3px;
+$hamburger-layer-spacing       : 4.5px;
+
+@import "../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";

@@ -12,8 +12,8 @@ sass.compiler = require("node-sass");
 
 const routes = {
     html: {
-        watch: "src/index.html",
-        src: "src/index.html",
+        watch: "src/*.html",
+        src: "src/**",
         dest:"build"
     },
     img:{

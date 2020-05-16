@@ -1,0 +1,64 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+.footer {
+    padding: 50px 0 90px;
+    background-color: $darkBgC;
+    .footer__container {
+        @include flex($dir:column,$jusCon:center,$aliItem:center);
+        @include position($pos:relative,$z:1000);
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+.footer__sns {
+    @include flex($jusCon:center,$aliItem:center);
+    width: 100%;
+    margin-bottom: 55px;
+    a {
+        margin: 0 10px;
+    }
+    i {
+        width: 30px;
+        height: 30px;
+        display: block;
+        transition: 0.3s;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    .footer__twitter i {
+        @include image($url:"../images/icon/twitter.svg",$pos:center center,$size:contain,$rep:no-repeat);
+    }
+    .footer__facebook i {
+        @include image($url:"../images/icon/facebook.svg",$pos:center center,$size:contain,$rep:no-repeat);
+    }
+    .footer__instagram i {
+        @include image($url:"../images/icon/instagram.svg",$pos:center center,$size:contain,$rep:no-repeat);
+    }
+    .footer__noopener i {
+        @include image($url:"../images/icon/spotify.svg",$pos:center center,$size:contain,$rep:no-repeat);
+    }
+}
+.footer__nav {
+    width: 100%;
+    ul {
+        @include flex($jusCon:center,$aliItem:center,$wrap:wrap);
+        padding-bottom: 10px;
+        width: 100%;
+        li {
+            padding: 10px 25px;
+            a {
+                @include font($size:16px,$color:$white,$transform:uppercase,$weight:600);
+                transition: 0.3s;
+                &:hover {
+                    color: $red;
+                }
+            }
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}

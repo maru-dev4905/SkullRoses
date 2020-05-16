@@ -1,0 +1,136 @@
+@import "../common/variable";
+
+// background-image mixin
+@mixin image ($url, $size:null, $pos:null, $rep:null) {
+    background-image: url($url);
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: $rep;
+}
+// display flex mixin
+@mixin flex($dir:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,$wrap:null) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jusCon;
+    justify-items: $jusItem;
+    justify-self: $jusSelf;
+    align-content: $aliCon;
+    align-items: $aliItem;
+    align-self: $aliSelf;
+    flex-wrap: $wrap;
+}
+// display grid mixin
+@mixin grid($flow:null, $tCol:null, $tRow:null, $tAre:null, $col:null, $row:null, $gap:null, $rGap:null, $cGap:null, $AtCol:null, $AtRow:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,) {
+    display: grid;
+    grid-auto-flow: $flow;
+    grid-template-columns: $tCol;
+    grid-template-rows: $tRow;
+    grid-template-areas: $tAre;
+    grid-column: $col;
+    grid-row: $row;
+    grid-gap: $gap;
+    row-gap: $rGap;
+    column-gap: $cGap;
+    grid-auto-columns: $AtCol;
+    grid-auto-rows: $AtRow;
+    justify-content: $jusCon;
+    justify-items: $jusItem;
+    justify-self: $jusSelf;
+    align-content: $aliCon;
+    align-items: $aliItem;
+    align-self: $aliSelf;
+}
+// font mixin
+@mixin font($size:null, $color:null, $weight:null, $transform:null, $letter:null, $break:null, $height:null, $align:null,$style:null) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    text-transform: $transform;
+    letter-spacing: $letter;
+    word-break: $break;
+    line-height: $height;
+    text-align: $align;
+    font-style: $style;
+}
+// position mixin
+@mixin position($pos:null, $t:null, $l:null, $b:null, $r:null, $z:null) {
+    position: $pos;
+    top: $t;
+    left: $l;
+    right: $r;
+    bottom: $b;
+    z-index: $z;
+}
+// responsive mixin
+@mixin responsive($device) {
+    @if $device == "iphone" {
+        @media screen and (max-width: $maxIphone) {
+            @content;
+        }
+    } @else if $device == "tablet" {
+        @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+            @content;
+        }
+    } @else if $device == "iphone-l" {
+        @media screen and (min-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $device == "ipad-l" {
+        @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+// title mixin
+@mixin title($color,$width,$height) {
+    .section__title {
+        @include flex($jusCon:center,$aliItem:center);
+        @include font($color:$opC, $transform:uppercase,$letter:1.5px);
+        margin: 0 auto 60px;
+        text-align: center;
+
+        h2 {
+            @include flex($dir:column,$jusCon:center,$aliItem:Center);
+            font-size: 2.8125rem;
+            width: 90%;
+            max-width: 1000px;
+            -webkit-text-stroke: 1.5px $white;
+
+            &::after {
+                @if($color == wine) {
+                    @include image($url:"../images/common/underline-wine.svg",$pos:center center,$size:100%,$rep:no-repeat);
+                } @else {
+                    @include image($url:"../images/common/underline-red.svg",$pos:center center,$size:100%,$rep:no-repeat);
+                }
+                content: "";
+                padding-top: 40px;
+                width: $width;
+                height: $height;
+            }
+        }
+        p {
+            @include font($color:$white,$size:0.938rem,$height:1.6875rem,$weight:600,$transform:none);
+            padding: 0 10px;
+            max-width: 640px;
+        }
+    }
+}
+// link button mixin
+@mixin link {
+    .link{
+        @include flex($dir:row, $jusCon:center,$aliItem:center);
+        @include font($size:1.063rem,$color:$white,$weight:600);
+        transition: 0.3s;
+        &:hover{
+            opacity: 0.6;
+        }
+        &::before{
+            @include image($url:"../images/icon/button.svg",$pos:center center,$rep:no-repeat,$size:contain);
+            content: "";
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin-right: 10px;
+        }
+    }
+}
