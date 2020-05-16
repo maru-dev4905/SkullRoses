@@ -56,3 +56,10 @@ mixin sns(href, text)
     a(href= href class="footer__"+text)
         span.sr= text
         i.footer__sns__ico
+
+mixin purchaseCardLink(href, text)
+    .passes__card__link
+        a.link(
+            href= href
+            target="_blank"
+        )= text

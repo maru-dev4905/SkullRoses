@@ -1,0 +1,85 @@
+include ../common/mixin
+include ../common/variable
+
+section.passes
+    +detailSectionTitle("passes__title",passesH2,passesP,"./passes.html",passesA)
+    .passes__grid
+        .passes__card(
+            data-aos="zoom-in"
+            data-aos-duration="700"
+        )
+            .passes__card__content
+                h3 3 Day pass
+                h4 GA 
+                p General Admission access to all three-days of Skull & Roses:
+                ul
+                    each text in purchase3PASS
+                        +list(text)
+                strong Tier 2: $229 Limited Supplices Last
+            +purchaseCardLink("https://www.eventbrite.com/e/skull-roses-festival-tickets-79492605523", "Buy Pass")
+        .passes__card(
+            data-aos="zoom-in"
+            data-aos-duration="700"
+            data-aos-delay="300"
+        )
+            .passes__card__content
+                h3 3.5 Day pass
+                h4 GA 
+                    em Plus
+                p Enjoy the pass and the perks with GA 
+                    em Plus:
+                ul
+                    each text in purchase35PASS
+                        +list(text)
+                strong Tier 3: $499
+            +purchaseCardLink("https://www.eventbrite.com/e/skull-roses-festival-tickets-79492605523","Buy Pass")
+        .passes__card(
+            data-aos="zoom-in"
+            data-aos-duration="700"
+        )
+            .passes__card__content
+                h3 single day tickets
+                h4 Friday, Saturday, or Sunday GA
+                    | Passes Are Now Available
+                p SINGLE DAY TICKETS are officially here! Pick one or
+                    | multiple days and join us for a jam-packed weekend in
+                    | Ventura, CA!
+                ul
+                    li 
+                        strong $119 
+                        |  - Friday
+                    li 
+                        strong $119 
+                        |  - Saturday
+                    li 
+                        strong $79 
+                        |  - Sunday
+            +purchaseCardLink("https://www.eventbrite.com/e/skull-roses-festival-tickets-79492605523","Buy Single Day")
+        .passes__card(
+            data-aos="zoom-in"
+            data-aos-duration="700"
+        )
+            .passes__card__content
+                h3 thursday night kickoff
+                h4 Stu Allen & Mars Hotel And
+                    | Rooster Conspiracy
+                ul
+                    each text in purchaseKickoff
+                        +list(text)
+                p GA 
+                    em Plus 
+                    | pass holders will have complimentary access to
+                    | the Kickoff Party! RSVP Required.
+                strong $45 While Limited Supplies Last
+            +purchaseCardLink("https://www.eventbrite.com/e/skull-roses-festival-tickets-79492605523","Buy Pass")
+        .passes__card(
+            data-aos="zoom-in"
+            data-aos-duration="700"
+        )
+            .passes__card__content
+                h3 add on's
+                h4 S&R Travel Packages
+                ul
+                    each text in purchaseAddOn
+                        +list(text)
+            +purchaseCardLink("https://www.eventbrite.com/e/skull-roses-festival-tickets-79492605523","Explore Add-On's")

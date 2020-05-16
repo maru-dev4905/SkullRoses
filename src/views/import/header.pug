@@ -4,8 +4,12 @@ include ../common/variable
 header.header
     nav
         ul.header__nav
-            li#side__nav--item(class="header--nav--item")
-                a(href="./passes.html") passes
+            if fileName == "passes"
+                li#passes__nav--item(class="header--nav--item")
+                    a(href="./passes.html") passes
+            else 
+                li#side__nav--item(class="header--nav--item")
+                    a(href="./passes.html") passes
             +linkList("","","./lineup.html",    "2020 line up"  ,"nav__item")
             +linkList("","","./schedule.html",  "schedule"      ,"nav__item")
             h1.header__logo
