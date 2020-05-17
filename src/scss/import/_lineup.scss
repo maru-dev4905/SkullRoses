@@ -1,6 +1,12 @@
 @import "../common/mixin";
 @import "../common/variable";
 
+#lineup__nav--item{
+    a{
+        color: $red;
+    }
+}
+
 .lineup{
     @include title($color:red, $width:230px, $height:8px);
     @include position($pos:relative,$z:500);

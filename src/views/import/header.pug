@@ -10,7 +10,11 @@ header.header
             else 
                 li#side__nav--item(class="header--nav--item")
                     a(href="./passes.html") passes
-            +linkList("","","./lineup.html",    "2020 line up"  ,"nav__item")
+            if fileName == "lineup"
+                li#lineup__nav--item
+                    a(href="./lineup.html") 2020 line up
+            else
+                +linkList("","","./lineup.html",    "2020 line up"  ,"nav__item")
             +linkList("","","./schedule.html",  "schedule"      ,"nav__item")
             h1.header__logo
                 a(href="./index.html")
