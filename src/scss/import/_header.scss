@@ -3,7 +3,7 @@
 
 .header {
     @include flex($jusCon:center,$aliItem:center);
-    @include position($pos:absolute,$z:1000,$t:0,$l:0);
+    @include position($pos:absolute,$z:5000,$t:0,$l:0);
     width: 100vw;
     padding: 30px 0;
     nav {

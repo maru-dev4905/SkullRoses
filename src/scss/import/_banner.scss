@@ -51,7 +51,7 @@
 }
 .banner__container {
     @include flex($jusCon:center,$aliItem:center);
-    @include position($pos:absolute,$t:0,$l:50%);
+    @include position($pos:absolute,$t:0,$l:50%,$z:1500);
     max-width: 1000px;
     width: 90%;
     height: 100%;
