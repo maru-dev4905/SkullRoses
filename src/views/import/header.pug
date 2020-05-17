@@ -15,7 +15,11 @@ header.header
                     a(href="./lineup.html") 2020 line up
             else
                 +linkList("","","./lineup.html",    "2020 line up"  ,"nav__item")
-            +linkList("","","./schedule.html",  "schedule"      ,"nav__item")
+            if fileName == "schedule"
+                li#schedule__nav--item
+                    a(href="./schedule.html") schedule
+            else
+                +linkList("","","./schedule.html",    "schedule"  ,"nav__item")
             h1.header__logo
                 a(href="./index.html")
             +linkList("","","./experience.html","experience"    ,"nav__item")

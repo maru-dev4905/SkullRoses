@@ -1,6 +1,12 @@
 @import "../common/mixin";
 @import "../common/variable";
 
+#schedule__nav--item{
+    a{
+        color: $red;
+    }
+}
+
 .schedule{
     @include position($pos:relative,$z:500);
     @include title($color:red,$width:230px,$height:8px);
@@ -14,5 +20,8 @@
     }
     p{
         @include font($size:1.125rem, $color:$white,$align:center);
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
     }
 }
