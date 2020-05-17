@@ -26,11 +26,12 @@ mixin detailSectionTitle(classes, h2, p, href, a)
                 span.link= a
 
 
-mixin artistCard(delay,url,src,text)
-    .artist__card(
+mixin artistCard(delay,url,src,text,classes)
+    div(
                 data-aos="zoom-in"
                 data-aos-duration="700"
                 data-aos-delay= delay
+                class= classes
             )
                 a.artist__card__img(href= url)
                     figure

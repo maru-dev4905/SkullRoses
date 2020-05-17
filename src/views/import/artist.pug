@@ -8,21 +8,31 @@ section.artist
             "0",
             "#",
             "./images/main/billy-kids-facebook-w600h600.jpg",
-            "billy & the kids"
+            "billy & the kids",
+            "artist__card"
         )
         +artistCard(
             "250",
             "#",
             "./images/main/oteil-press-2-web-high-res-whitney-wangsgaard-w600h600.jpg",
-            "oteil & friends"
+            "oteil & friends",
+            "artist__card"
         )
         +artistCard(
             "500",
             "#",
             "./images/main/voodoodeadpress-katie-fox-w600h600.png",
-            "voodoo dead"
+            "voodoo dead",
+            "artist__card"
         )
     .artist__lineup
         ul
             each text, index in artistLineup
-                +linkList("fade-in", index*100, "./lineup.html", text)
+                +linkList("fade-in", index*100, "#", text)
+        a.link(
+            href="./lineup.html"
+            class="lineup__link"
+            )
+                .lineup__link__color
+                    .lineup__link__icon
+                | See Full Lineup
