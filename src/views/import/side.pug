@@ -6,9 +6,17 @@ include ../common/variable
         ul.side--nav
             h1.side__logo
                 a(href="/")
-            li#side__nav--item(class="side--nav--item")
-                a(href="./passes") passes
-            +linkList("","","./lineup.html",    "2020 line up", "side--nav--item")
+            if fileName == "passes"
+                li#passes__nav--item(class="side--nav--item")
+                    a(href="./passes.html") passes
+            else 
+                li#side__nav--item(class="header--nav--item")
+                    a(href="./passes.html") passes
+            if fileName == "lineup"
+                li#lineup__nav--item
+                    a(href="./lineup.html") 2020 line up
+            else
+                +linkList("","","./lineup.html",    "2020 line up"  ,"side--nav--item")
             +linkList("","","./schedule","      schedule",      "side--nav--item")
             +linkList("","","./experience",     "experience",   "side--nav--item")
             +linkList("","","./lodging","       lodging",       "side--nav--item")
