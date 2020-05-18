@@ -99,8 +99,10 @@
             &::after {
                 @if($color == wine) {
                     @include image($url:"../images/common/underline-wine.svg",$pos:center center,$size:100%,$rep:no-repeat);
-                } @else {
+                } @else if($color == red){
                     @include image($url:"../images/common/underline-red.svg",$pos:center center,$size:100%,$rep:no-repeat);
+                } @else if($color == black){
+                    @include image($url:"../images/common/underline-black.svg",$pos:center center,$size:100%,$rep:no-repeat);
                 }
                 content: "";
                 padding-top: 40px;

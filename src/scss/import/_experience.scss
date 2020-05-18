@@ -1,2 +1,60 @@
 @import "../common/mixin";
 @import "../common/variable";
+
+#experience__nav--item{
+    a{
+        color: $red;
+    }
+}
+
+.experience{
+    @include link;
+    .experience__top{
+        @include title($color:$red,$width:230px,$height:8px);
+        @include position($pos:relative,$z:500);
+        background-color: $bgC;
+        padding: 80px 0;
+        p{
+            @include font($size:1.125rem, $color:$white,$align:center,$height:1.563rem);
+            width: 90%;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+        .section__title{
+            width: 100vw;
+            height: auto;
+            margin: 0;
+        }
+    }
+    .experience__wine-merlot{
+        @include title($color:black,$width:60px,$height:8px);
+        padding: 80px 0;
+        width: 100vw;
+        height: auto;
+        background:linear-gradient(0deg,#801b2e 0,#4e2944 80%,#3a112f);
+        .section__title{
+            @include grid($tCol:repeat(2,1fr),$gap:75px,$jusCon:flex-start);
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        .experience__title__container{
+            @include flex($dir:column,$jusCon:flex-start,$aliItem:flex-start);
+            h2{
+                align-items: flex-start;
+            }
+            p{
+                text-align: left;
+                margin-bottom: 30px;
+                padding: 0;
+                strong{
+                    font-weight: 800;
+                }
+                em{
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
