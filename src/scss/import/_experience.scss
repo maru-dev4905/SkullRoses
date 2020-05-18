@@ -60,6 +60,14 @@
                 em{
                     font-style: italic;
                 }
+                a{
+                    color: $white;
+                    transition: 0.2s;
+                    border-bottom: 2.5px solid rgba($color: $white, $alpha: 0.7);
+                    &:hover{
+                        border-bottom: 3.5px solid rgba($color: $white, $alpha: 0.7);
+                    }
+                }
             }
             a{
                 text-transform: none;
