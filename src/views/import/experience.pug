@@ -12,6 +12,18 @@ section.experience
             | music and community that formed around iconic American rock band
             | The Grateful Dead.
     .experience__wine-merlot
-        +detailSectionTitle("experience__title",experienceMusicTitle,experienceMusicContent,"#",experienceMusicLink)
-        figure
-        figure
+        .experience__wine-merlot__container
+            +detailSectionTitle("experience__title",experienceMusicTitle,experienceMusicContent,"#",experienceMusicLink)
+            .experience__img
+                figure(
+                    data-aos="fade-in"
+                    data-aos-duration="700"
+                    data-aos-delay="600"
+                )
+                    img(src="./images/experience/dsc7406-w600h600.jpg", alt="gilter")
+                figure(
+                    data-aos="fade-in"
+                    data-aos-duration="700"
+                    data-aos-delay="300"
+                )
+                    img(src="./images/experience/vhbtmd1t-w600h600.jpeg", alt="concert")
