@@ -5,6 +5,19 @@ mixin sectionTitle(text)
             data-aos-duration="1000"
         )= text
 
+mixin subSectionTitle(classes, h2, p)
+    .section__title
+        div(class= classes+"__container")
+            h2(
+                data-aos="fade-up"
+                data-aos-duration="700"
+            )= h2
+            p(
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="300"
+            ) !{p}
+
 mixin detailSectionTitle(classes, h2, p, href, a)
     .section__title(class= classes)
         div(class= classes+"__container")
