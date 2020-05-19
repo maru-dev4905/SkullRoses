@@ -22,6 +22,11 @@ header.header
                 +linkList("","","./schedule.html",    "schedule"  ,"nav__item")
             h1.header__logo
                 a(href="./index.html")
-            +linkList("","","./experience.html","experience"    ,"nav__item")
+
+            if fileName == "experience"
+                li#experience__nav--item
+                    a(href="./experience.html") experience
+            else
+                +linkList("","","./experience.html","experience"    ,"nav__item")        
             +linkList("","","./lodging.html",   "lodging"       ,"nav__item")
             +linkList("","","./faqs.html",      "faqs"          ,"nav__item")

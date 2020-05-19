@@ -21,7 +21,11 @@ include ../common/variable
                 li#schedule__nav--item(class="side--nav--item")
                     a(href="./schedule.html") schedule
             else
-                +linkList("","","./schedule","      schedule",      "side--nav--item")
-            +linkList("","","./experience",     "experience",   "side--nav--item")
+                +linkList("","","./schedule.html","      schedule",      "side--nav--item")
+            if fileName == "experience"
+                li#experience__nav--item(class="side--nav--item")
+                    a(href="./experience.html") experience
+            else
+                +linkList("","","./experience.html","      experience",      "side--nav--item")            
             +linkList("","","./lodging","       lodging",       "side--nav--item")
             +linkList("","","./faqs",           "faqs",         "side--nav--item")
