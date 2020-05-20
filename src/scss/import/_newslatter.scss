@@ -24,7 +24,7 @@
     }
     .newslatter__signup {
         @include flex($dir:column,$jusCon:center,$aliItem:center);
-        @include position($pos:absolute,$l:50%,$t:-170px,$z:2000);
+        @include position($pos:absolute,$l:50%,$t:-170px,$z:5000);
         width: 90%;
         max-width: 1000px;
         transform: translateX(-50%);

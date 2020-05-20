@@ -64,7 +64,7 @@
 // responsive mixin
 @mixin responsive($device) {
     @if $device == "iphone" {
-        @media screen and (max-width: $maxIphone) {
+        @media screen and (max-width: $minIphone){
             @content;
         }
     } @else if $device == "tablet" {

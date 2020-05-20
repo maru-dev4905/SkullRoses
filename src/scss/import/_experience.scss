@@ -32,9 +32,19 @@
         width: 100vw;
         height: auto;
         [class*=__container]{
+            @include responsive("iphone"){
+                grid-template-columns: 1fr;
+                grid-template-rows: min-content min-content;
+                width: 90%
+            }
+            @include responsive("iphone-l"){
+                grid-template-columns: 1fr;
+                grid-template-rows: min-content min-content;
+                width: 80%;
+            }
             @include position($pos:relative,$z:3000);
             @include grid($tCol:repeat(2,1fr),$gap:75px,$jusCon:flex-start,$aliItem:center);
-            width: 100%;
+            width: 90%;
             max-width:1000px;
             height: 100%;
             margin: 0 auto;
@@ -75,6 +85,7 @@
     }
     .experience__wine-merlot{
         background:linear-gradient(0deg,#801b2e 0,#4e2944 80%,#3a112f);
+        padding-bottom: 200px;
     }
     .experience__wine-shade{
         background-color: #801b2e;
@@ -82,9 +93,25 @@
     .experience__merlot-pink{
         background:linear-gradient(0deg,#ff365c 0,#8d3243 80%,#801b2e);
         height: 100vh;
+        @include responsive("iphone"){
+            height: 90vh;
+        }
+        @include responsive("iphone-l"){
+            height: 110vh;
+        }
     }
     [class^=experience__img]{
+        @include responsive("iphone"){
+            height: 50px;
+        }
+        @include responsive("iphone-l"){
+            height: 200px;
+        }
         figure{
+            @include responsive("iphone"){
+                width: 300px;
+                height: 300px;
+            }
             width: 400px;
             height: 400px;
 
@@ -99,19 +126,49 @@
     .experience__img_right{
         figure{
             &:first-child{
-                @include position($pos:absolute,$r:10px,$t:-150px,$z:1000);
+                @include responsive("iphone"){
+                    @include position($pos:absolute,$b:-200px,$r:-50px);
+                }
+                @include responsive("iphone-l"){
+                    @include position($pos:absolute,$b:-100px,$r:-50px);
+                }
+                @include position($pos:absolute,$r:10px,$b:250px,$z:1000);
             }
             &:last-child{
-                @include position($pos:absolute,$r:-190px,$t:100px,$z:500);
+                @include responsive("iphone"){
+                    @include position($pos:absolute,$b:-250px,$r:200px);
+                }
+                @include responsive("iphone-l"){
+                    @include position($pos:absolute,$b:-180px,$r:280px);
+                }
+                @include position($pos:absolute,$r:-190px,$b:100px,$z:500);
             }
         }
     }
     .experience__img_left{
+        @include responsive("iphone"){
+            order: 2;
+        }
+        @include responsive("iphone-l"){
+            order: 2;
+        }
         figure{
             &:first-child{
+                @include responsive("iphone"){
+                    @include position($pos:absolute,$t:auto,$b:-200px,$l:auto,$r:-50px);
+                }
+                @include responsive("tablet"){
+                    @include position($pos:absolute,$t:auto,$b:-120px,$l:auto,$r:-50px);
+                }
                 @include position($pos:absolute,$l:10px,$t:-120px,$z:1000);
             }
             &:last-child{
+                @include responsive("iphone"){
+                    @include position($pos:absolute,$t:auto,$b:-270px,$l:auto,$r:200px)
+                }
+                @include responsive("tablet"){
+                    @include position($pos:absolute,$t:auto,$b:-200px,$l:20px);
+                }
                 @include position($pos:absolute,$l:-190px,$t:200px,$z:500);
             }
         }
