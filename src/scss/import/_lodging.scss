@@ -62,6 +62,7 @@
             max-width:1000px;
             height: 100%;
             margin: 0 auto;
+            padding: 80px 0;
         }
         .section__title{
             width: 100%;
@@ -102,6 +103,7 @@
     }
     .lodging__wine-shade{
         background-color: #801b2e;
+        padding-bottom: 200px;
     }
     [class^=lodging__img]{
         @include responsive("iphone"){
