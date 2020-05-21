@@ -12,18 +12,32 @@ let hambugerCheck = "close";
 let windowWidth;
 let windowHeight;
 
-// hamburger menu show / hide function
-window.addEventListener("resize", () => {
-    windowWidth = window.innerWidth;
-    windowHeight = window.innerHeight;
+windowWidth = window.innerWidth;
+windowHeight = window.innerHeight;
 
-    if (windowWidth <= MOBILE) {
+// hamburger menu show / hide function
+function showHamburger(){
+    if(windowWidth <= MOBILE){
         hamburger.style.opacity = "1";
         hamburger.style.zIndex = "5500";
-    } else {
+    } else{
         hamburger.style.opacity = "0";
         hamburger.style.zIndex = "-5500";
     }
+}
+
+// hamburger menu window load show / hide function
+window.addEventListener("load",()=>{
+    showHamburger();    
+})
+
+// hamburger menu window resize show / hide function
+window.addEventListener("resize", () => {
+
+    windowWidth = window.innerWidth;
+    windowHeight = window.innerHeight;
+    
+    showHamburger();
 });
 
 // Hambuger menu click event
