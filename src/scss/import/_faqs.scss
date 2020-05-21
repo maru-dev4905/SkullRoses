@@ -1,2 +1,75 @@
 @import "../common/mixin";
 @import "../common/variable";
+
+#faqs__nav--item{
+    a{
+        color: $red;
+    }
+}
+
+.faqs{
+    position: relative;
+    background-color: $bgC;
+    width: 100vw;
+    height: auto;
+    .faqs__container{
+        @include position($pos:relative,$z:6000);
+        padding: 80px 0 150px;
+        width: 80%;
+        max-width: 830px;
+        margin: 0 auto;
+        color: $white;
+        a{
+            color: $white;
+        }
+    }
+    .faqs__title{
+        width: 100%;
+        max-width: 540px;
+        h3{
+            @include font($size:2.5rem, $color:rgba($color:$white, $alpha:0), $transform:uppercase,$letter:3.5px);
+            -webkit-text-stroke: 1px $white;
+        }
+        p{
+            @include font($size:1.063rem,$height:1.688rem,$weight:400);
+            padding: 55px 0;
+        }
+    }
+
+}
+.accordion{
+    label{
+        @include font($size:1.563rem,$letter:1.2px,$color:rgba($color:$white,$alpha:0),$transform:uppercase);
+        -webkit-text-stroke: 1px $white;
+    }
+    input[id*="answer"]{
+        display: none;
+        + label{
+            display: block;
+            padding: 20px 35px;
+            cursor: pointer;
+            em{
+                @include image($url:"../images/icon/button.svg",$size:contain,$rep:no-repeat,$pos:center);
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                left: 0;
+                transition: all 0.5s;
+            }
+            + .accordion__item__content{
+                max-height: 0;
+                transition: all .5s;
+                overflow: hidden;
+            }
+        }
+        &:checked + label{
+            +.accordion__item__content{
+                max-height: 1000px;
+            }
+            em{
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
