@@ -27,5 +27,8 @@ include ../common/variable
                     a(href="./experience.html") experience
             else
                 +linkList("","","./experience.html","      experience",      "side--nav--item")            
-            +linkList("","","./lodging","       lodging",       "side--nav--item")
+            if fileName == "lodging"
+                li#lodging__nav--item(class="side--nav--item")
+            else
+                +linkList("","","./lodging","       lodging",       "side--nav--item")
             +linkList("","","./faqs",           "faqs",         "side--nav--item")

@@ -27,6 +27,10 @@ header.header
                 li#experience__nav--item
                     a(href="./experience.html") experience
             else
-                +linkList("","","./experience.html","experience"    ,"nav__item")        
-            +linkList("","","./lodging.html",   "lodging"       ,"nav__item")
+                +linkList("","","./experience.html","experience"    ,"nav__item")
+            if fileName == "lodging"
+                li#lodging__nav--item
+                    a(href="./lodging.html") lodging    
+            else    
+                +linkList("","","./lodging.html",   "lodging"       ,"nav__item")
             +linkList("","","./faqs.html",      "faqs"          ,"nav__item")
