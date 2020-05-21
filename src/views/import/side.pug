@@ -16,19 +16,24 @@ include ../common/variable
                 li#lineup__nav--item(class="side--nav--item")
                     a(href="./lineup.html") 2020 line up
             else
-                +linkList("","","./lineup.html",    "2020 line up"  ,"side--nav--item")
+                +linkList("","","./lineup.html","2020 line up","side--nav--item")
             if fileName == "schedule"
                 li#schedule__nav--item(class="side--nav--item")
                     a(href="./schedule.html") schedule
             else
-                +linkList("","","./schedule.html","      schedule",      "side--nav--item")
+                +linkList("","","./schedule.html","schedule","side--nav--item")
             if fileName == "experience"
                 li#experience__nav--item(class="side--nav--item")
                     a(href="./experience.html") experience
             else
-                +linkList("","","./experience.html","      experience",      "side--nav--item")            
+                +linkList("","","./experience.html","experience","side--nav--item")            
             if fileName == "lodging"
-                li#lodging__nav--item(class="side--nav--item")
+                li#lodging__nav--item(class="side--nav--item") 
+                    a(href="./lodging.html") lodging
             else
-                +linkList("","","./lodging","       lodging",       "side--nav--item")
-            +linkList("","","./faqs",           "faqs",         "side--nav--item")
+                +linkList("","","./lodging.html","lodging","side--nav--item")
+            if fileName == "faqs"
+                li#faqs__nav--item(class="side--nav--item")
+                    a(href="./faqs.html") faqs
+            else
+                +linkList("","","./faqs.html","faqs","side--nav--item")
