@@ -5,23 +5,27 @@ section.faqs
     .faqs__title
         h3 skull and roses faq's
         p You've got questions, we have answers! Explore the categories below for more information.
-    ul.faqs__list
-        li.accordition__item--title
-            h4 festival dates and hours
-            .accordition__item--content
-                p Skull & Roses Festival 2020 will take place April 2-5th at Ventura County Fairgrounds in Ventura CA.
+    ul.accordion
+        input#answer01(type="checkbox")
+        label.accordion__item__title(for="answer01")
+            em
+            |  festival dates and hours
+        .accordion__item__content
+            p Skull & Roses Festival 2020 will take place April 2-5th at Ventura County Fairgrounds in Ventura CA.
                 h5 Festival Hours:
                 p Thursday (Passes Sold Separately): 6 PM - 11 PM
                     br
-                    | Friday: 11 AM - 12 AM
+                    |  Friday: 11 AM - 12 AM
                     br
-                    | Saturday: 11 AM - 12 AM
+                    |  Saturday: 11 AM - 12 AM
                     br
-                    | Sunday: 11 AM - 7 PM
+                    |  Sunday: 11 AM - 7 PM
                 p A full festival schedule will be released in the coming months!
-        li.accordition__item--title
-            h4 ga vs. ga plus
-            .accordition__item--content
+        input#answer02(type="checkbox")
+        label.accordion__item__title(for="answer02")
+            em
+            |  ga vs. ga plus
+        .accordion__item__content
                 p The truth is, whichever pass you pick you will have a rockin' time at Skull & Roses 2020.
                 p GA pass holders will enjoy:
                 ul
@@ -42,71 +46,314 @@ section.faqs
                     li Complimentary Water
                     li Full Service bar.
                 p You can learn more about our pass options and purchase by visiting SkullandRoses.com/passes
-        li.accordition__item--title
-            h4 lost and found
-            .accordition__item--content
+        input#answer03(type="checkbox")
+        label.accordion__item__title(for="answer03")
+            em
+            |  lost and found
+        .accordion__item__content
                 p Visit the Guest Services near the main entrance during festival hours, October 3rd - 5th or visit
-                    | skullandroses.com/lostfound (link will activate April 1st) to search for missing items or to file a claim
-                    | for lost and found items at S&R.
+                    |  skullandroses.com/lostfound (link will activate April 1st) to search for missing items or to file a claim
+                    |  for lost and found items at S&R.
                 p Skull and Roses will not be held liable for any lost items. Skull and Roses will hold items through
-                    | Monday April 6th at which point they will be turned over to the Ventura County Fairgrounds.
-        li.accordition__item--title
-            h4 box office information
-            .accordition__item--content
+                    |  Monday April 6th at which point they will be turned over to the Ventura County Fairgrounds.
+        input#answer04(type="checkbox")
+        label.accordion__item__title(for="answer04")
+            em
+            |  box office information
+        .accordion__item__content
                 p The Skull & Roses Box Office will open 1 hour before gates Friday, Saturday, and Sunday and
-                    | starting at 1 PM  on Thursday. A limited number of tickets will be available onsite and we strongly
-                    | recommend that you purchase in advance at
+                    |  starting at 1 PM  on Thursday. A limited number of tickets will be available onsite and we strongly
+                    |  recommend that you purchase in advance at
                     strong SkullandRoses.com.
-        li.accordition__item--title
-            h4 festival map
-            .accordition__item--content
+        input#answer05(type="checkbox")
+        label.accordion__item__title(for="answer05")
+            em
+            |  festival map
+        .accordion__item__content
                 strong Stay Tuned for our 2020 Skull and Roses Map.
-        li.accordition__item--title
-            h4 allowed items
-            .accordition__item--content
-                ul
-                    li
-                    li
-                    li
-                    li
-                    li
-                    li
-                    li
-                    li
-                    li
-                    li
-                    li
-        li.accordition__item--title
-            h4 projibited items
-        li.accordition__item--title
-            h4 ada accessibility
-        li.accordition__item--title
-            h4 safety at skull and roses
-        li.accordition__item--title
-            h4 security screening & entry
-        li.accordition__item--title
-            h4 exit and re-enrty
-        li.accordition__item--title
-            h4 locker rentals & mobile charging
-        li.accordition__item--title
-            h4 cash & credit cards
-        li.accordition__item--title
-            h4 lodging: purchase hotels with tour s&r pass
-        li.accordition__item--title
-            h4 lodging: purchase rv camping with tour s&r pass
-        li.accordition__item--title
-            h4 lodging: purchase tent camping with your s&r pass
-        li.accordition__item--title
-            h4 which airport should i fly into?
-        li.accordition__item--title
-            h4 thursday night's kickoff party details
-        li.accordition__item--title
-            h4 skull & roses schedule
-        li.accordition__item--title
-            h4 food options at s&r
-        li.accordition__item--title
-            h4 volunteer at skull & roses!
-        li.accordition__item--title
-            h4 can i bring my dog?
-        li.accordition__item--title
-            h4 youth tickets
+        input#answer06(type="checkbox")
+        label.accordion__item__title(for="answer06")
+            em
+            |  allowed items
+        .accordion__item__content
+            ul
+                li Bags will be restricted to small purses, totes, and drawstring bags only. Bag size may not exceed
+                    |  14" x 11" x 5", or 30 linear inches in total, and must have no more than one singular pocket or
+                    |  opening. Backpacks and bags with multiple pockets are projibited. Hydration packs are allowed
+                    |  but must be emptied of all liquid and have no more than two pockets in addition to the one
+                    |  holding the water reservoir.            
+                li Binoculars
+                li Blankets, Sheets, Towels
+                li Cameras (basic point and shoot consumer-grade cameras) without detachable lenses and other
+                    |  accessories (monopods, selfie sticks, tripods, GoPro mounts, and other attachments are not allowed).
+                li GoPro cameras without accessories.
+                li Portable/collapsible chair (individual seat only; no double wide or connecting chairs).
+                li Sunscreen lotion (no aerosol containers)
+                li Empty hydration packs
+                li Empty Water Bottles (plastic or aluminium).
+                li External Battery Charges
+                li Prescription Medication Requirements:
+                    ul
+                        li Anyone needing prescription medication at the festival must present the pharmacy-labeled
+                            |  container which states the prescription, dosage, and patient name to our medical staff at
+                            |  each entrance gate. Patrons are only allowed a sufficient supply of the prescribed
+                            |  medication for that day.
+                        li Medicines needing to be inhaled or smoked are prohibited unless in a prescribed inhaler.
+                        li Over the counter medications are allowed in a sufficient supply for the day. Better contents
+                            |  will be verified by medical personnel at the entry gates.
+        input#answer06(type="checkbox")
+        label.accordion__item__title(for="answer06")
+            em
+            | prohibited items
+        .accordion__item__content
+            ul
+                li Bags will be restricted to small purses, totes, and drawstring bags only. Bag size may not exceed
+                    |  14" x 11" x 5", or 30 linear inches in total, and mst have no more than one singular pocket or
+                    |  opening. Backpacks and bags with multiple pockets are prohibited. Hydration packs are allowed
+                    |  but must be emptied of all liquid and have no more than two pockets in addition to the one
+                    |  holding the water reservoir.
+                li Liquids.
+                li Aerosol containers (including sunscreen and personal beauty products)
+                li Any and all professional audio recording equipment
+                li Any and all camera accessories, such as selfic sticks, tripods, monopods, go pro mounts and
+                    |  attachments, detachable lenses, or other commercial equipment.
+                li Drones or any other remote flying device.
+                li Frisbees
+                li Coolers of any kind (exceptions may be made for medical use)
+                li Framed backpacks
+                li Hammocks
+                li Glass containers of any kind
+                li Firearms, explosives, and weapons of any kind (including pocket knives, pepper spray, freworks,
+                    |  etc.)
+                li Illegal and illicit substances of any kind
+                li Drugs or drug paraphernalia
+                li Outside food or beverage (including alcohol)
+                li Umbrellas
+                li Pets (except service animals)
+                li Skateboards, scooters, bicycles, wagons, carts (including red wagons) or any personal motorized vehicles.
+                li Tents, canopies, or shade structures of any kind.
+                li Unauthorized/unlicensed vendors are not allowed. No unauthorized solicitation and materials
+                    |  including handbills, flyers, stickers, beach balls, give-aways, samples, etc.
+                li Large chains or spikedjewelry
+                li Bicycles inside the festival grounds
+                li No inflatable furniture.
+        input#answer07(type="checkbox")
+        label.accordion__item__title(for="answer07")
+            em
+            | ada accessibility
+        .accordion__item__content
+            p Skull and Roses welcomes guests of all abilities and we're excited to have you join us at this year's
+                |  event. For any specific questions regarding ADA accessibility of the festival please contact us
+                |  directly at
+                a(href="mailto:ADA@skullandroses.com" target="_blank") ADA@skullandroses.com
+            p For assistance once onsite, please visit us at the information booth. We have a friendly Access Crew
+                |  available to answer any questions you may have. Accessible parking is available on a first come, first
+                |  serve basis in conjunction with state issues handicap placard.
+            h4 
+                strong SERVICE ANIMALS - Definition and Policies
+            p Skull and Roses welcomes and supports the rights and attendance of all persons with disabilities that
+                |  rely on the special skills of a trained service animal. What we DO NOT support, not will tolerate,
+                |  are pets being misrepresented by their owners as service animals, when in fact they are not.
+            p 
+                strong Service Animal Definition:
+            p A'service animal' means "any dog that is individually trained to do work or perform tasks for the
+                |  benefit of an individual with a disability. The work or tasks performed by a service animal must be
+                |  directly related to the handler's disability."
+            p Emotional support or comfort animals are not considered service animals under the ADA and
+                |  therefore are not allowed at Skull and Roses.
+            p
+                strong Service Animal Policies:
+            p For our guests with disabilities who wish to bring their legitimate service animal to Skull and Roses,
+                |  we ask that you review and follow the policies outlined below:
+            ol
+                li Service animals must be accompanied by the handler with the disability at all times.
+                li Service animals must be under the control and supervision of their handler at all times.
+                li Service animals are not permitted to be left in camp unattended under any circumstances.
+                li Handlers are required to be prepared for, and clean-up after, their animals at all times.
+                li We reserve the right to remove and/or refuse access to any service animal from the
+                    |  campgrounds or venues if that animal is deemed to be a health or safety threat to festival guests,
+                    |  staff, or other service animals, or is in violation of the policies listend above.
+        input#answer08(type="checkbox")
+        label.accordion__item__title(for="answer08")
+            em
+            |  safety at skull and roses
+        .accordion__item__content
+            p The safety and wellbeing of our guests is our number one priority -- it's the reason we have spent so
+                |  much time building the terms and conditions for our festival experience.
+            p If you have questions, comments, or concerns while at the festival, please find one of our event staff
+                |  ho will be happy to assist you.
+        input#answer09(type="checkbox")
+        label.accordion__item__title(for="answer09")
+            em
+            | security screening & entry
+        .accordion__item__content
+            p For the safety of everyone entering the festival, all patrons are subject to a full and complete search prior to entry.
+            p Please review the Allowed & Prohibited items list for a stress-free entry process.
+            p By purchasing a ticket, you agree to submit to a full body pat-down and metal detector search
+                |  before entry. If you would like to be screened by security personnel of your same gender, please let
+                |  security personnel know prior to the search process. Screening of children will always take place
+                |  with the consent of a parent of guardian.
+            p All bags will be searched before entry. To speed up entry, leave your bags at home, and take
+                |  advantage of our express entry lenes.
+            p Persons that refuse to comply with the search policy will be refused entry into the event.
+            p At any time during the entry process if you have questions, ask for assistance from Festival or
+                |  Fairgrounds Staff located at the main gate.
+        input#answer10(type="checkbox")
+        label.accordion__item__title(for="answer10")
+            em
+            |  exit and re-entry
+        .accordion__item__content
+            p Pass holders are allowed to enter and exit the fairgrounds as you wish during Skull & Roses. Pass
+                |  holders and their belongings will be searched upon entry and re-entry to the fairgrounds. As a
+                |  reminder, outside food and beverage is NOT permitted onsite.
+        input#answer11(type="checkbox")
+        label.accordion__item__title(for="answer11")
+            em
+            |  locker rentals & mobile charging
+        .accordion__item__content
+            p Need a safe place to store your things or charge your phone during the festival?
+            p We offer rental lockers with phone chargers by the General Store near the Main Entrance so you
+                |  can free up your hands and avoid losing any personal items during the show. Learn more and reserve
+                |  Your Locker NOW by
+                a(href="https://secure.mobilecharginglockers.com/affiliate/website/event/Skull-And-Roses----Locker-Rental") Clicking Here.
+        input#answer12(type="checkbox")
+        label.accordion__itme__title(for="answer12")
+            em
+            |  cash & credit cards
+        .accordion__item__content
+            p All festibal vendors accept both cash and credit cards.
+        input#answer13(type="checkbox")
+        label.accordion__item__title(for="answer13")
+            em
+            |  lodging: purchase hotels with our s&r pass
+        .accordion__item__content
+            h5 Skull & Roses has curated a shortlist of preferred hotel parters
+                |  and you can purchase your rooms when you buy your festival
+                |  pass as an add-on
+            p Standard Options are as follows:
+            p 
+                strong 3 Night Stay at Crowne Plaza Ventura Beach
+                |  - Thursday April 2, Friday April 3, Saturday April 4, Checkout on Sunday April 5.
+            p
+                strong 2 Night Stay at Ventura Beach Marriott
+                |  - Friday April 3 and Saturday April 4, Checkout on Sunday April 5.
+            p Important Information:
+            ul
+                li When you purchase hotel rooms through Skull & Roses along with your festival pass, you will
+                    |  pay for one night's room rate. You will receive a confirmation from the hotel a week or so after
+                    |  purchasing. The remainging balance for your stay will need to be paid by February 15th, you will
+                    |  receive a link to pay your balance by email.
+                li All Sales Are FINAL. If a guest fails to pay their hotel balance by February 15th - their
+                    |  reservation will be canceled and resold.
+                li If you would like to extend your stay, you can do so by
+                    strong contacting the hotel AFTER your receive a confirmation number.
+        input#answer14(type="checkbox")
+        label.accordion__item__title(for="answer14")
+            em
+            | lodging: purchase rv camping with your s&r pass
+        .accordion__item__content
+            p Skull & Roses has two options for camping with our amazing partners at Ventura RV Resort. You
+                | can purchase your camping package when you buy your festival pass as an add-on.
+            p 
+                strong RV Camping:
+                |  VIP RV Camping is available through our partners at Ventura Beach RV Resort for
+                |  RV's, trailers, vans, campers, and vehicles that are aged 1995 to 2020. VIP RV camping includes
+                |  hook up with sewer and water. Once you have purchased your VIP Camping RV Pass, you will be
+                |  sent an email with a code and instructions on how to reserve your designated space with the RV
+                |  Resort. Space is LIMITED! Please note; this pass is for a maximum of FOUR guests. There is a $25
+                |  fee for each additional camper. ALL VIP Camping  Pass Holders MUST also purchase a 3 Day GA or
+                |  3 Day GA Plus pass. Space is limited.
+            p Your RV Camping purchase grants you access to our pool, hot tub, recreational room. As well as
+                |  free DVD rentals, billiard games, basketball rentals, centipede tractor ride throughout the resort,
+                |  shuttle service to/from Ventura County Fairgroudns, and the resorts famous pancake breakfast on
+                |  Sunday mornings between 8 a.m. - 11 a.m.
+            p 
+                strong After Purchasing:
+                |  Once you have purchased your RV Camping Pass with S&R, you will receive a
+                |  confirmation email with instructions on how you can select your designated camping spot. Please
+                |  keep an eye on your inbox for this important information.
+        input#answer15(type="checkbox")
+        label.accordion__item__title(for="answer15")
+            em
+            | lodging:purchase tent camping with your s&r pass
+        .accordion__item__content
+            p Skull & Roses has two options for camping with our amazing partners at Ventura RV Resort. You
+                | can purchase your camping package when you buy your festival pass as an add-on.
+            p
+                strong Tent Camping:
+                |  VIP Tent Camping is available through our partners at Ventura Beach RV Resort.
+                |  Each site comes with four (4) resort passes, which grants you access to the pool, hot tub,
+                |  recreational room. As well as free DVD rentals, billiard games, basketball rentals, centipede tractor
+                |  ride throughout the resort, shuttle service to/from Ventura County Fairgrounds, and the resorts
+                |  famous pancake breakfast on Sunday mornings between 8 a.m. - 11 a.m. All Camping Pass Holders
+                |  MUST also purchase a 3 Day GA or 3 Day GA 
+                em Plus
+                |  pass. Space is limited.
+            p
+                strong After Purchasing:
+                |  Once you have purchased your Tent Camping Pass with S&R, Ventura RV
+                |  Resort will assign you a designated camping spot, when you check-in their amazing team will show
+                |  you where to go!
+        input#answer16(type="checkbox")
+        label.accordion__item__title(for="answer16")
+            em
+            |  which aorport should i fly into?
+        .accordion__item__content
+            p The closest airports to Skull and Roses and the Ventura County Fairgrounds are LAX and Santa Barbara Airport.
+        input#answer17(type="checkbox")
+        label.accordion__item__title(for="answer17")
+            em
+            |  thursday night's kickoff partry details
+        .accordion__item__content
+            p Skull & Roses 2020 will kickoff with Thursday Night's Kickoff Party featuring live performances
+                |  from Stu Allen & Mars Hotel and Rooster Conspiracy. The Kickoff event will take place at the
+                |  Ventura County Fairgrounds.
+            p 
+                strong If you are a GA
+                    em Plus
+                    |  pass holder
+                |  you have complimentary access to the Kickoff Party, however
+                strong you are required to RSVP.
+                |  You will receive an email on how to do that in mid January.
+            p For GA pass holders or the general public, the Thursday Night Kickoff Party is available to purchase
+                |  as an add-on.
+        input#answer18(type="checkbox")
+        label.accordion__item__title(for="answer18")
+            em
+            |  skull & roses chedule
+        .accordion__item__content
+            p The 2020 Skull & Roses Schedule will be released closer to the schedule. Stay Tuned!
+        input#answer19(type="checkbox")
+        label.accordion__item__title(for="answer19")
+            em
+            |  food options at s&r
+        .accordion__item__content
+            p Love Festival Eats? Skull & Roses is working on a terrific lineup of regional and national food
+                |  vendors to join us. A full list of vendors will be made available in advence of the festival.
+            p Naturally, our food vendor selection will be diverse and able to accommondate special diets.
+            p Interested in becoming a food vendor?
+                a(href="http://skullandroses.com/contact") Contact Us!
+        input#answer20(type="checkbox")
+        label.accordion__item__title(for="answer20")
+            em
+            |  volunteer at skull & roses!
+        .accordion__item__content
+            p We do have a limited number of volunteer positions for Skull & Roses 2020. Email
+                |  info@skullandroses.com for more information -- we'll be in touch as soon as possible.
+        input#answer21(type="checkbox")
+        label.accordion__item__title(for="answer21")
+            em
+            |  can i bring my dog?
+        .accordion__item__content
+            p Great question! Out of respect for our larger community and all that will be going on at S&R
+                |  2020, no dogs (or pets) are permitted.
+        input#answer22(type="checkbox")
+        label.accordion__item__title(for="answer22")
+            em
+            |  youth tickets
+        .accordion__item__content
+            p All children 12 and under do not require a ticket. For children ages 13 and up, GA tickets are $75
+                |  and GA
+                em Plus
+                | tickets are $150. You can purchase your tickets by visiting the pass page right here on SkullandRoses.com
+        
