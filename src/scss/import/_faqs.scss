@@ -1,74 +1,133 @@
 @import "../common/mixin";
 @import "../common/variable";
 
-#faqs__nav--item{
-    a{
+#faqs__nav--item {
+    a {
         color: $red;
     }
 }
 
-.faqs{
+.faqs {
     position: relative;
     background-color: $bgC;
     width: 100vw;
     height: auto;
-    .faqs__container{
+    .faqs__container {
         @include position($pos:relative,$z:6000);
         padding: 80px 0 150px;
         width: 80%;
         max-width: 830px;
         margin: 0 auto;
         color: $white;
-        a{
-            color: $white;
-        }
     }
-    .faqs__title{
+    .faqs__title {
         width: 100%;
         max-width: 540px;
-        h3{
+        h3 {
             @include font($size:2.5rem, $color:rgba($color:$white, $alpha:0), $transform:uppercase,$letter:3.5px);
             -webkit-text-stroke: 1px $white;
         }
-        p{
+        p {
             @include font($size:1.063rem,$height:1.688rem,$weight:400);
             padding: 55px 0;
         }
     }
 
 }
-.accordion{
-    label{
+.accordion {
+    label {
         @include font($size:1.563rem,$letter:1.2px,$color:rgba($color:$white,$alpha:0),$transform:uppercase);
         -webkit-text-stroke: 1px $white;
     }
-    input[id*="answer"]{
+    input[id*="answer"] {
         display: none;
-        + label{
+        + label {
             display: block;
             padding: 20px 35px;
             cursor: pointer;
-            em{
+            em {
                 @include image($url:"../images/icon/button.svg",$size:contain,$rep:no-repeat,$pos:center);
+                @include position($pos:absolute,$l:0);
                 display: inline-block;
                 width: 25px;
                 height: 25px;
-                position: absolute;
-                left: 0;
                 transition: all 0.5s;
             }
-            + .accordion__item__content{
+            + .accordion__item__content {
                 max-height: 0;
-                transition: all .5s;
+                transition: all 0.5s;
                 overflow: hidden;
             }
         }
-        &:checked + label{
-            +.accordion__item__content{
+        &:checked + label {
+            +.accordion__item__content {
                 max-height: 1000px;
             }
-            em{
+            em {
                 transform: rotate(90deg);
+            }
+        }
+    }
+    .accordion__item__content {
+        margin-left: 35px;
+        line-height: 30px;
+        h4 {
+            @include font($size:1.75rem,$weight:700,$letter:1.2px);
+            padding: 15px 0;
+        }
+        h5 {
+            @include font($size:1.438rem,$weight:600);
+            padding: 15px 0;
+        }
+        a {
+            @include font($size:1.125rem,$weight:600,$color:$white);
+            border-bottom: 2px solid rgba($color: $white, $alpha: 0.6);
+            transition: 0.3s;
+            &:hover {
+                border-bottom: 4px solid rgba($color: $white, $alpha: 0.6);
+            }
+        }
+        em {
+            font-style: italic;
+        }
+        p {
+            padding: 10px 0;
+            font-size: 15px;
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+        strong {
+            font-weight: 700;
+        }
+        .accordion__content__sub {
+            padding: 20px 0;
+        }
+        ol {
+            display: block;
+            list-style-type: decimal;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+            padding-inline-start: 20px;
+        }
+        ul {
+            padding: 10px 0;
+            li {
+                @include font($size:0.938rem,$weight:400);
+                list-style-position: inside;
+                position: relative;
+                padding: 3.5px 0 3.5px 25px;
+                &::before {
+                    @include image($url:"../images/icon/star.svg",$size:contain,$pos:left center,$rep:no-repeat);
+                    @include position($pos:absolute,$l:0,$t:10px);
+                    content: "";
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    padding-right: 15px;
+                }
             }
         }
     }
