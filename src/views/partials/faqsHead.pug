@@ -1,0 +1,34 @@
+include ../common/variable
+
+head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        
+        //- Basic SEO
+        meta(name="description" content= faqsDescription)
+        meta(name="theme-color" content= themeColor)
+        meta(name="keywords" content="content")
+        meta(name="robots" content="content")
+        
+        //- Open Graph
+        meta(property="og:type" content="website")
+        meta(property="og:title" conten= faqsTitle)
+        meta(property="og:description" content= faqsDescription)
+        meta(property="og:site_name" content="skull and Roses festival")
+
+        //- Favicon
+        link(rel="apple-touch-icon-precomposed",
+             href="https://skullandroses.com/assets/images/meta/touch-icon.png")
+        link(rel="icon", 
+            type="image/png"
+            href="https://skullandroses.com/assets/images/meta/favicon.png")
+        link(rel="icon", 
+            size="180x180"
+            href="https://skullandroses.com/assets/images/meta/touch-icon.png")
+        
+        //- title
+        title= faqsTitle
+        //- css link
+        link(rel="stylesheet", href="./css/skull.css")
+        link(rel="stylesheet", href="https://unpkg.com/aos@2.3.0/dist/aos.css")
+        - let fileName="faqs";

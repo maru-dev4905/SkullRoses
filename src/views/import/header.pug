@@ -33,4 +33,8 @@ header.header
                     a(href="./lodging.html") lodging    
             else    
                 +linkList("","","./lodging.html",   "lodging"       ,"nav__item")
-            +linkList("","","./faqs.html",      "faqs"          ,"nav__item")
+            if fileName == "faqs"
+                li#faqs__nav--item
+                    a(href="./faqs.html") faqs
+            else
+                +linkList("","","./faqs.html",      "faqs"          ,"nav__item")
