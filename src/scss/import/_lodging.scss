@@ -1,3 +1,40 @@
 @import "../common/mixin";
 @import "../common/variable";
 
+#lodging__nav--item{
+    a{
+        color: $red;
+    }
+}
+.lodging{
+    @include link;
+    width: 100vw;
+    height: auto;
+    .lodging__top{
+        @include title($color:red,$width:230px,$height:8px);
+        @include position($pos:relative,$z:500);
+        background-color: $bgC;
+        padding: 80px 0;
+        .lodging__title{
+            width: 90%;
+            max-width: 1000px;
+            text-transform: none;
+            .lodging__title__container{
+                @include flex($dir:column,$jusCon:center,$aliItem:center);
+                @include link;
+                max-width: 620px;
+                margin: 0 auto;
+                h2{
+                    @include font($size:2.188rem,$transform:uppercase);
+                }
+                p{
+                    @include responsive("iphone"){
+                        font-size: 0.938rem;
+                    }
+                    font-size: 1.125rem;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
