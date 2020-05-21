@@ -157,7 +157,7 @@
                 @include responsive("iphone"){
                     @include position($pos:absolute,$t:auto,$b:-200px,$l:auto,$r:-50px);
                 }
-                @include responsive("tablet"){
+                @include responsive("iphone-l"){
                     @include position($pos:absolute,$t:auto,$b:-120px,$l:auto,$r:-50px);
                 }
                 @include position($pos:absolute,$l:10px,$t:-120px,$z:1000);
@@ -166,7 +166,7 @@
                 @include responsive("iphone"){
                     @include position($pos:absolute,$t:auto,$b:-270px,$l:auto,$r:200px)
                 }
-                @include responsive("tablet"){
+                @include responsive("iphone-l"){
                     @include position($pos:absolute,$t:auto,$b:-200px,$l:20px);
                 }
                 @include position($pos:absolute,$l:-190px,$t:200px,$z:500);
