@@ -13,7 +13,7 @@
     width: 100vw;
     height: auto;
     .faqs__container {
-        @include position($pos:relative,$z:6000);
+        @include position($pos:relative,$z:5400);
         padding: 80px 0 150px;
         width: 80%;
         max-width: 830px;
@@ -61,7 +61,7 @@
         }
         &:checked + label {
             +.accordion__item__content {
-                max-height: 1000px;
+                max-height: 300vh;
             }
             em {
                 transform: rotate(90deg);

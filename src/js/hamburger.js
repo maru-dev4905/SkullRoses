@@ -19,10 +19,10 @@ windowHeight = window.innerHeight;
 function showHamburger(){
     if(windowWidth <= MOBILE){
         hamburger.style.opacity = "1";
-        hamburger.style.zIndex = "5500";
+        hamburger.style.zIndex = "15000";
     } else{
         hamburger.style.opacity = "0";
-        hamburger.style.zIndex = "-5500";
+        hamburger.style.zIndex = "-15000";
     }
 }
 
@@ -45,7 +45,7 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("is-active");
 
     if (hambugerCheck == "close") {
-        nav.style.zIndex = "5000";
+        nav.style.zIndex = "10000";
         nav.style.opacity = "1";
         hambugerCheck = "open"
         for (let i = 0; i < navItem.length; i++) {
@@ -54,7 +54,7 @@ hamburger.addEventListener("click", () => {
             navItem[i].style.animationDelay = "0." + i + "s";
         }
     } else {
-        nav.style.zIndex = "-5000";
+        nav.style.zIndex = "-10000";
         nav.style.opacity = "0";
         hambugerCheck = "close"
         for (let i = 0; i < navItem.length; i++) {
