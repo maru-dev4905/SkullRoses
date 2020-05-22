@@ -10,8 +10,20 @@ footer.footer
             +sns("https://open.spotify.com/user/2stndhp7h8vqr62dl9bu254o2?si=VXVEx0-FTnKhfUwHYshVxw",   "noopener")
         nav.footer__nav
             ul
-                +linkList("","","#","contact")
-                +linkList("","","#","sponsors")
-                +linkList("","","#","terms and conditions")
-                +linkList("","","#","news")
-                +linkList("","","#","volunteer")
+                if fileName == "contact"
+                    li#contact__nav--item
+                        a(href="./contact.html") contact
+                else
+                    +linkList("","","./contact.html","contact","nav__item")
+                if fileName == "sponsors"
+                    li#sponsors__nav--item
+                        a(href="./sponsors.html") sponsors
+                else
+                    +linkList("","","./sponsors.html","sponsors","nav__item")
+                if fileName == "conditions"
+                    li#conditions__nav--itme
+                        a(href="./conditions.html") conditions
+                else
+                    +linkList("","","./conditions.html","terms and conditions","nav__item")
+                +linkList("","","https://medium.com/@skullandroses","news","nav__item")
+                +linkList("","","https://medium.com/@skullandroses/volunteer-at-s-r-2020-3627e39102c5","volunteer","nav__item")
