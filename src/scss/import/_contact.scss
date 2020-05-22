@@ -26,6 +26,9 @@
             padding-bottom: 20px;
         }
         .form__column{
+            @include responsive("iphone"){
+                flex-direction: column-reverse;
+            }
             @include flex($dir:row,$jusCon:space-between);
         }
         label{
@@ -66,12 +69,21 @@
     }
     
     .form__message{
+        @include responsive("iphone"){
+            width: 100%;
+        }
         @extend form;
         width: 49%;
     }
     .form__content{
+        @include responsive("iphone"){
+            width: 100%;
+        }
         width: 49%;
         .form__row:last-child{
+            @include responsive("iphone"){
+                padding-bottom: 20px;
+            }
             padding: 0;
         }
     }
