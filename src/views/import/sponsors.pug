@@ -2,3 +2,29 @@ include ../common/mixin
 include ../common/variable
 
 section.sponsors
+    .sponsors__container
+        .sponsors__title
+            +sectionTitle("thanks to our sponsors")
+        .sponsors__content
+            figure
+                a(href="https://www.flyingembers.com/" target="_blank")
+                    span.sr Flying Embers
+                    img(src="./images/sponsors/fesimplecirclelogo190412gold-w300.png", alt="Flying Embers logo-img")
+            figure
+                a(href="http://northcoastorganics.us" target="_blank")
+                    span.sr North Coast Organics
+                    img(src="./images/sponsors/northcoastorganicsgratefuldeadsponsorlogo2-01-w300.png", alt="North Coast Organics logo-img")
+            figure
+                a(href="https://visitventuraca.com/" target="_blank")
+                    span.sr Visit Ventura
+                    img(src="./images/sponsors/logodesktop-w300.png", alt="visit ventura logo-img")
+        .sponsors__link
+            .sponsors__link__container
+                h2 want to be part of something special?
+                a.link(
+                    href="./contact.html"
+                    class="sponsors__link"
+                )   
+                    .sponsors__link__color
+                        .sponsors__link__icon
+                    | Sponsors Our Event
