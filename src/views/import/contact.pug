@@ -5,7 +5,12 @@ section.contact
     .contact__title
         +sectionTitle("contact us for more info")
     .contact__container
-        form(method="post")
+        form(
+            method="post"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="800"
+            )
             .form__row
                 label(for="form__interested") I'm interested in:
                 select#form__interested(name="interested")
