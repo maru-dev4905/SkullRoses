@@ -51,17 +51,18 @@
                 display: inline-block;
                 width: 25px;
                 height: 25px;
-                transition: all 0.5s;
+                transition: all 0.3s;
             }
             + .accordion__item__content {
                 max-height: 0;
-                transition: all 0.5s;
+                transition: 1s;
                 overflow: hidden;
             }
         }
         &:checked + label {
             +.accordion__item__content {
                 max-height: 300vh;
+                transition: 2s;
             }
             em {
                 transform: rotate(90deg);
