@@ -1,0 +1,78 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+.contact{
+    @include position($pos:relative);
+    background-color: $bgC;
+    width: 100vw;
+    height: auto;
+    padding: 80px 0 140px;
+    .contact__title{
+        @include title($color:red,$width:230px,$height:8px);
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    .contact__container{
+        width: 90%;
+        max-width: 830px;
+        margin: 0 auto;
+        color: $white;
+    }
+    form{
+        @include position($pos:relative,$z:5400);
+        @include flex($dir:column);
+        .form__row{
+            @extend form;
+            padding-bottom: 20px;
+        }
+        .form__column{
+            @include flex($dir:row,$jusCon:space-between);
+        }
+        label{
+            @include font($size:0.969rem,$weight:600);
+            padding-bottom: 10px;
+        }
+        select{
+            width: 200px;
+            height: 25px;
+            font-size: 1rem;
+        }
+        input{
+            border-radius: 15px;
+            border: none;
+            height: 40px;
+            padding: 10px 14px;
+            font-weight: 600;
+        }
+        textarea{
+            border-radius: 15px;
+            height: 100%;
+            padding: 10px 14px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        button{
+            @include flex($dir:row,$jusCon:flex-end,$aliItem:center);
+            @include font($size:0.938rem,$weight:600,$color:$white,$letter:1.1px);
+            &:before{
+                @include image($url:"../images/icon/button.svg",$size:contain,$pos:center,$rep:no-repeat);
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+    
+    .form__message{
+        @extend form;
+        width: 49%;
+    }
+    .form__content{
+        width: 49%;
+        .form__row:last-child{
+            padding: 0;
+        }
+    }
+}

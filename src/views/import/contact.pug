@@ -2,7 +2,8 @@ include ../common/mixin
 include ../common/variable
 
 section.contact
-    +sectionTitle("contact us for more info")
+    .contact__title
+        +sectionTitle("contact us for more info")
     .contact__container
         form(method="post")
             .form__row
@@ -16,18 +17,19 @@ section.contact
                     option(value="Volunteer") Volunteer
                     option(value="Other") Other
             .form__row
-                .form__message
-                    label(for="form__message") My Message:
-                    textarea#form__message(name="message", cols="30", rows="4")
-                .form__content
-                    .form__row
-                        label(for="form__name") Name
-                        input#form__name(type="text" name="name")
-                    .form__row
-                        label(for="form__telephone") Telephone
-                        input#form__telephone(type="text" name="telephone")
-                    .form__row
-                        label(for="form__email") Email
-                        input#form__email(type="email" name="email")
+                .form__column
+                    .form__message
+                        label(for="form__message") My message:
+                        textarea#form__message(name="message", cols="30", rows="4")
+                    .form__content
+                        .form__row
+                            label(for="form__name") Name
+                            input#form__name(type="text" name="name")
+                        .form__row
+                            label(for="form__telephone") Telephone
+                            input#form__telephone(type="text" name="telephone")
+                        .form__row
+                            label(for="form__email") Email
+                            input#form__email(type="email" name="email")
             .form__row
                 button(type="submit") Send message
