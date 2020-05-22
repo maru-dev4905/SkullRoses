@@ -1,6 +1,12 @@
 @import "../common/mixin";
 @import "../common/variable";
 
+#contact__nav--item{
+    a{
+        color: $red;
+    }
+}
+
 .contact{
     @include position($pos:relative);
     background-color: $bgC;
