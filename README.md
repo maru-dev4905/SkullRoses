@@ -23,5 +23,6 @@ aos, hamburgers
 [x] terms and conditions
 
 ### host link
-<https://maru-dev.000webhostapp.com/SkullandRoses/index.html/>
+[Skull & Roses](https://maru-dev.000webhostapp.com/SkullandRoses/index.html "(S&R)")
+
 ![Screenshot 2020-05-22 at 18 40 41](https://user-images.githubusercontent.com/60824564/82654508-d05e0100-9c5b-11ea-8103-7a1be43af156.jpg)
