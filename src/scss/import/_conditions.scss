@@ -1,0 +1,44 @@
+@import "../common/mixin";
+@import "../common/variable";
+#conditions__nav--item{
+    a{
+        color: $red;
+    }
+}
+
+.condition{
+    position: relative;
+    background-color: $bgC;
+    width: 100vw;
+    height: auto;
+    padding: 80px 0;
+    .condition__container{
+        @include position($pos:relative,$z:5400);
+        width: 90%;
+        max-width: 830px;
+        margin: 0 auto;
+        color: $white;
+        h2{
+            @include font($size:2.375rem,$color:rgba($color:$white,$alpha:0),$letter:4.4px,$transform:uppercase);
+            -webkit-text-stroke: 1.5px $white;
+            padding-bottom: 55px;
+        }
+        p{
+            @include font($size:1.125rem,$weight:600);
+            padding-bottom: 35px;
+        }
+    }
+    .condition__content{
+        width: 100%;
+        max-width: 550px;    
+        strong{
+            @include font($size:1.375rem,$weight:600,$transform:uppercase);
+            margin-bottom: 30px;
+            display: block;
+        }   
+        p{
+            @include font($size:1rem,$height:1.563rem);
+            padding-bottom: 30px;
+        }
+    }
+}
