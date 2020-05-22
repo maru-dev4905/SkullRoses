@@ -11,7 +11,7 @@
     background-color: $white;
     width: 100vw;
     height: auto;
-    padding: 80px 140px 180px;
+    padding: 80px 0 180px;
     .sponsors__container{
         @include position($pos:relative,$z:5400);
         width: 90%;
