@@ -27,7 +27,7 @@
         }
     }
     .sponsors__content{
-        @include grid($tCol:repeat(3,1fr),$gap:20px, $jusCon:space-between,$aliItem:center);
+        @include flex($wrap:wrap);
         padding-bottom: 80px;
         figure{
             padding: 25px;
